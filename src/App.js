@@ -8,7 +8,7 @@ function App() {
   return (
    <>
     <NavBar/>
-    <ItemListContainer/>
+    <ItemListContainer greeting='Hola, bienvenido a Kingual Education®'/>
     <CartWidget/>
    </>
 
