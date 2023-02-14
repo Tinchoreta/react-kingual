@@ -8,7 +8,7 @@ function App() {
   return (
    <>
     <NavBar/>
-    <ItemListContainer greeting='Hola, bienvenido a Kingual Education®'/>
+    <ItemListContainer greeting='Hola, bienvenido a Kingual Education®. No hay items en el carrito'/>
    </>
 
   );
