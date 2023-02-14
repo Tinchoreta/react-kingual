@@ -9,7 +9,6 @@ function App() {
    <>
     <NavBar/>
     <ItemListContainer greeting='Hola, bienvenido a Kingual Education®'/>
-    <CartWidget/>
    </>
 
   );
