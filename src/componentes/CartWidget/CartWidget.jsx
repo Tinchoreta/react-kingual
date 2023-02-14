@@ -1,10 +1,12 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const CartWidget = () => {
   return (
-    <FontAwesomeIcon icon="fa-regular fa-cart-shopping" />
+    //12 items harcodeado
+    //profe no puedo hacer andar Fontawesome. Importo el CDN y hago todo correcto pero no hay forma
+    
+    <i class="fa-light fa-cart-shopping">12</i>
   )
 }
 
