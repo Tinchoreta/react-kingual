@@ -1,0 +1,75 @@
+.container {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid rgba(251, 251, 251);
+    box-shadow: 0px 6px 10px lightgray;
+    transition: 0.2s ease-out;
+    justify-content: center;
+    border-radius: 4px;
+    width: 280px;
+    margin: 10px;
+}
+
+.card img {
+    width: 280px;
+    display: block;
+    position: static;
+    text-align: center;
+}
+
+.card:hover {
+    background: whitesmoke;
+    box-shadow: 0px 10px 30px lightgray;
+    transition: 1s ease;
+    color: rgba(144,244,239);
+}
+
+.card p {
+    display: block;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p.idioma-curso {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .8em;    
+    margin-top: -25px;
+}
+
+.card div.align-btn {
+    text-align: center;
+}
+
+.card button {
+    border-color: rgba(0, 119, 182, 0.9);
+    color: rgba(0, 119, 182, 0.9);
+    background-color: white;
+}
+
+.card button:hover {
+    border-color: rgba(0,119,182);
+    color: rgba(0,119,182);
+    /* background-color: whitesmoke; */
+}
+
+.card button:active {
+    color: white;
+    background-color: rgb(0, 180, 216);
+}
+
+.card-button {
+    text-align: center;
+}
