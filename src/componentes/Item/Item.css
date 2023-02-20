@@ -10,15 +10,16 @@
 .card {
     border: 1px solid rgba(251, 251, 251);
     box-shadow: 0px 6px 10px lightgray;
-    transition: 0.2s ease-out;
+    transition: 0.4s ease-out;
     justify-content: center;
-    border-radius: 4px;
-    width: 280px;
+    align-items: center;
+    border-radius: 8px;
+    width: 230px;
     margin: 10px;
 }
 
 .card img {
-    width: 280px;
+    width: 230px;
     display: block;
     position: static;
     text-align: center;
@@ -26,9 +27,9 @@
 
 .card:hover {
     background: whitesmoke;
-    box-shadow: 0px 10px 30px lightgray;
+    box-shadow: 0px 15px 35px lightgray;
     transition: 1s ease;
-    color: rgba(144,244,239);
+    color: #FF773D ;
 }
 
 .card p {
@@ -56,7 +57,8 @@
 .card button {
     border-color: rgba(0, 119, 182, 0.9);
     color: rgba(0, 119, 182, 0.9);
-    background-color: white;
+    background-color: rgb(162, 232, 228);
+    margin-bottom: 10px;
 }
 
 .card button:hover {
@@ -66,7 +68,7 @@
 }
 
 .card button:active {
-    color: white;
+    color: mintcream;
     background-color: rgb(0, 180, 216);
 }
 
