@@ -7,7 +7,7 @@ const ItemList = ({ data = [] }) => {
     data.map((curso) => (
 
       <div className="card ocultar" key={curso.id}>
-        <img src={pathImg(`./${curso.imgUrl}.jpg`)} alt={curso.nombre} />
+        <img src={pathImg(`./${curso.imgUrl.substring(0, str.length - 4)}.jpg`)} alt={curso.nombre} />
         <div>
           <p>{curso.nombre}</p>
           <p className="label-curso">{curso.nivel}</p>
