@@ -10,9 +10,11 @@ function App() {
   
   return (
    <>
-    <NavBar/>
-    <ItemListContainer greeting='Hola, bienvenido al carrito de compras de Kingual Education®.'/>
-    <ItemList items= ""/>
+    <React.StrictMode>
+      <NavBar/>
+      <ItemListContainer greeting='Hola, bienvenido al carrito de compras de Kingual Education®.'/>
+      <ItemList items= "Hola"/>
+    </React.StrictMode>
    </>
 
   );

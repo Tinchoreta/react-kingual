@@ -4,12 +4,12 @@ import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand ms-4" href="#">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a className="navbar-brand ms-4" href="#">
         Kingual®
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -17,24 +17,24 @@ const NavBar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Principal <span class="sr-only">(current)</span>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="#">
+              Principal <span className="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li className="nav-item">
+            <a className="nav-link" href="#">
               Staff
             </a>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -44,30 +44,30 @@ const NavBar = () => {
             >
               Cursos
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a className="dropdown-item" href="#">
                 👑 Inglés
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 🎎 Chino
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 {" "}
                 🥑 Portugés
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 {" "}
                 ⛄ Ruso
               </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <div className="dropdown-divider"></div>
+              <a className="dropdown-item" href="#">
                 {" "}
                 🍺 Español para extranjeros
               </a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link justify-content-end" href="#">
+          <li className="nav-item">
+            <a className="nav-link justify-content-end" href="#">
               <CartWidget />
             </a>
           </li>

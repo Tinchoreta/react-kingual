@@ -1,39 +1,34 @@
 import React, { useEffect, useState } from 'react'
+import bbdd from '../../bbdd/bbdd.json'
+import ItemList from '../ItemList/ItemList';
 
-const cursoImage = require.context('../../assets/img/',true)
-const URL= "../../bbdd/bbdd.json"
 
-const ItemListContainer = ({greeting}) => {
+const cursoImage = require.context('../../assets/img/', true,);
 
-  
+const ItemListContainer = ({ greeting }) => {
+
   const [listaCursos, setListaCursos] = useState([])
 
   // Usamos un efecto para cargar los datos del Json de cursos al montar el componente.
 
   useEffect(() => {
-    fetch(URL)
-    .then(response => response.json())
-    .then(dataJson => setListaCursos(dataJson.results))
+    const getData = new Promise(resolve => {
+      setTimeout(() => {
+        resolve(bbdd);
+      }, 3000)
+    })
+    getData.then(res => setListaCursos(res));
+    console.log(listaCursos)
+
   }, [])
+
+
 
   return (
     <>
       <p>{greeting}</p>
-      {
-        listaCursos.map(curso =>(
-          <div className="card ocultar">
-              <img src={cursoImage(`${curso.imgUrl}`)} alt={curso.nombre} />
-              <div>
-                  <p>{curso.nombre}</p>
-                  <p className="label-curso">{curso.nivel}</p>
-              </div>
-              <div>
-                  <button className="card-button">AGREGAR</button>
-              </div>
-          </div>
-        )
-        )
-      }
+      <ItemList data={listaCursos} />
+
     </>
   )
 }

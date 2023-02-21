@@ -7,7 +7,7 @@
         "moneda": "Dólar",
         "precio": "59.90",
         "detalles": "Curso pensado para personas que no tienen conocimiento del inglés y que quieren aprender las estructuras básicas, la pronunciación en inglés y adentrarse en el mundo de este hermoso idioma.",
-        "imgUrl": "English/Curso-English-Principiante-A1.jpg"
+        "imgUrl": "Curso-English-Principiante-A1.jpg"
     },
 
     {
@@ -18,7 +18,7 @@
         "moneda": "Dólar",
         "precio": "69.90",
         "detalles": "Curso destinado a estudiantes que ya poseen conocimientos básicos del inglés y que quieren mejorar su gramática, interpretación de textos, entendimiento general del idioma y la pronunciación, en el camino hacia la fluidez.",
-        "imgUrl": "English/Curso-English-Principiante-A2.jpg"
+        "imgUrl": "Curso-English-Principiante-A2.jpg"
 
     },
 
@@ -30,7 +30,7 @@
         "moneda": "Dólar",
         "precio": "79.90",
         "detalles": "Curso destiado a estudiantes que ya tienen experiencia con el inglés y desean seguir perfeccionando su nivel, en áreas como listening, writing y speaking",
-        "imgUrl": "English/Curso-English-Intermedio-B1.jpg"
+        "imgUrl": "Curso-English-Intermedio-B1.jpg"
 
     },
     {
@@ -41,7 +41,7 @@
         "moneda": "Dólar",
         "precio": "89.90",
         "detalles": "Curso pensado para personas que tienen un amplio conocimiento del inglés y que quieren llegar a dominar el idioma con fluidez y un vocabulario excepcional",
-        "imgUrl": "English/Curso-English-Intermedio-B2.jpg"
+        "imgUrl": "Curso-English-Intermedio-B2.jpg"
     },
     {
         "id": 5,
@@ -51,7 +51,7 @@
         "moneda": "Dólar",
         "precio": "89.90",
         "detalles": "Curso destinado a estudiantes avanzados del idioma, que buscan continuar avanzando en el camino hacia la fluidez y excelencia en el inglés",
-        "imgUrl": "English/Curso-English-Avanzado-C1.jpg"
+        "imgUrl": "Curso-English-Avanzado-C1.jpg"
     },
 
     {
@@ -62,7 +62,7 @@
         "moneda": "Dólar",
         "precio": "99.90",
         "detalles": "Curso destinado a estudiantes expertos del idioma, que buscan rendir certificaciones internacionales o que desean llevar su nivel a la maestría.",
-        "imgUrl": "English/Curso-English-Avanzado-C2.jpg"
+        "imgUrl": "Curso-English-Avanzado-C2.jpg"
 
     },
 
@@ -74,59 +74,59 @@
         "moneda": "Dólar",
         "precio": "39.90",
         "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
-        "imgUrl": "Portuguese/Curso-Portuguese-E.jpg"
+        "imgUrl": "Curso-Portuguese-E.jpg"
     },
 
     {
-        "id": 2,
-        "numCurso": "2",
+        "id": 8,
+        "numCurso": "8",
         "nombre": "Curso Portugués principiante (A1)",
         "nivel": "A1",
         "moneda": "Dólar",
         "precio": "59.90",
         "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
-        "imgUrl": "Portuguese/Curso-Pre-Intermedio-A1.jpg"
+        "imgUrl": "Curso-Pre-Intermedio-A1.jpg"
 
     },
 
     {
-        "id": 3,
-        "numCurso": "3",
+        "id": 9,
+        "numCurso": "9",
         "nombre": "Curso Portugués intermedio (B1)",
         "nivel":"B1",
         "moneda": "Dólar",
         "precio": "79.90",
         "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
-        "imgUrl": "POrtuguese/Curso-Portuguese-Intermedio-Bajo-B1.jpg"
+        "imgUrl": "Curso-Portuguese-Intermedio-Bajo-B1.jpg"
 
     },
     {
-        "id": 4,
-        "numCurso": "4",
+        "id": 10,
+        "numCurso": "10",
         "nombre": "Curso Portugués intermedio (B2)",
         "nivel":"B2",
         "moneda": "Dólar",
         "precio": "89.90",
-        "imgUrl": "Portuguese/Curso-Portuguese-Intermedio-Alto-B2.jpg"
+        "imgUrl": "Curso-Portuguese-Intermedio-Alto-B2.jpg"
     },
     {
-        "id": 5,
-        "numCurso": "5",
+        "id": 11,
+        "numCurso": "11",
         "nombre": "Curso Portugués avanzado (C1)",
         "nivel":"C1",
         "moneda": "Dólar",
         "precio": "89.90",
-        "imgUrl": "Portuguese/Curso-Portuguese-Avanzado-C1.jpg"
+        "imgUrl": "Curso-Portuguese-Avanzado-C1.jpg"
     },
 
     {
-        "id": 6,
-        "numCurso": "6",
+        "id": 12,
+        "numCurso": "12",
         "nombre": "Curso inglés avanzado (C2)",
         "nivel":"C2",
         "moneda": "Dólar",
         "precio": "99.90",
-        "imgUrl": "Portuguese/Curso-Portuguese-Avanzado-C2.jpg"
+        "imgUrl": "Curso-Portuguese-Avanzado-C2.jpg"
 
     }
 
