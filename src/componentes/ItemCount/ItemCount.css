@@ -5,3 +5,18 @@
     padding: 1rem;
     text-align: center;
 }
+
+.counter .itemCounter button {
+    color: rgb(220, 225, 234);
+    width: 3vh;
+    
+}
+
+.counter .itemCounter button:active {
+    color: mintcream;
+    background-color:burlywood;
+}
+
+.counter span {
+    margin: 20px;
+}

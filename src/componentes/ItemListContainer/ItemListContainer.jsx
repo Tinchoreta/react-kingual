@@ -19,7 +19,7 @@ const ItemListContainer = ({ greeting }) => {
     })
     getData.then(res => {
       setListaCursos(res)
-      console.log(res)
+      //console.log(res)
     });
     
 
@@ -30,8 +30,9 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <>
       <p>{greeting}</p>
-      <ItemList data={listaCursos} />
-
+      <div className='container'>
+        <ItemList data={listaCursos} />
+      </div>
     </>
   )
 }
