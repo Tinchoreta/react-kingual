@@ -3,7 +3,7 @@ import bbdd from '../../bbdd/bbdd.json'
 import ItemList from '../ItemList/ItemList';
 
 
-const cursoImage = require.context('../../assets/img/', true,);
+
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -17,8 +17,11 @@ const ItemListContainer = ({ greeting }) => {
         resolve(bbdd);
       }, 3000)
     })
-    getData.then(res => setListaCursos(res));
-    console.log(listaCursos)
+    getData.then(res => {
+      setListaCursos(res)
+      console.log(res)
+    });
+    
 
   }, [])
 
