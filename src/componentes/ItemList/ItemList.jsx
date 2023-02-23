@@ -5,12 +5,7 @@ const ItemList = ({ data = [] }) => {
 
   
   return (
-    data.map((curso) => (
-
-      <Item curso={curso} key={curso.id}/>
-     
-    )
-    )
+    data.length>0? data.map((curso) => (<Item curso={curso} key={curso.id}/>)):<p>Cargando items...</p>
   )
 }
 
