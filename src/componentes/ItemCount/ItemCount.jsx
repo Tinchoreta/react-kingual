@@ -27,9 +27,9 @@ const ItemCount = ({ totalStock ,  initialStock ,  itemTitle ,  onAdd }) => {
         <div className='counter'>
             <h4 className='title'>{itemTitle}</h4>
             <div className='itemCounter'>
-                <button className="pullItem" disabled= {stock<=initialStock} onClick={pullItem}>-</button>
+                <button className="pullItem" disabled={stock<=initialStock} onClick={pullItem}>-</button>
                 <span>{stock}</span>
-                <button className="addItem" disabled= {stock>=totalStock} onClick={addItem}>+</button>
+                <button className="addItem" disabled={stock>=totalStock} onClick={addItem}>+</button>
             </div>
             <button id='ItemButton' disabled = {stock<=0} onClick={()=>{onAdd(stock)}}>Agregar al carrito</button>
         </div>
