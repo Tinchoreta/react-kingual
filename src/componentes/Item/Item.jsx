@@ -7,8 +7,8 @@ const pathImgCurso = require.context('../../assets/img/', true) //, /\.jpg$/
 
 const Item = ({ curso = {} }, { key }) => {
 
-    const onAdd = ()=>{
-        console.log("Compra")
+    const onAdd = (quantity)=>{
+        console.log(`Compraste: ${quantity} de: ${curso.nombre}`)
     }
 
     return (
@@ -21,7 +21,7 @@ const Item = ({ curso = {} }, { key }) => {
                     <p className="label-curso"> Nivel: {curso.nivel}</p>
                 </div>
                 <div>
-                    <ItemCount totalStock = {5} initialStock={1} itemTitle = {typeof(curso.nombre!=='undefined')? curso.nombre:"ItemTitle"} onAdd={onAdd} />
+                    <ItemCount totalStock = {5} initialStock={0} itemTitle = {typeof(curso.nombre!=='undefined')? curso.nombre:"ItemTitle"} onAdd={onAdd} />
                 </div>
             </div>
         </>  

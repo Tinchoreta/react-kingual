@@ -6,6 +6,15 @@
     text-align: center;
 }
 
+.counter button:disabled{
+    color: black;
+}
+
+.counter .itemCounter button:disabled {
+    color: black;
+    
+}
+
 .counter .itemCounter button {
     color: rgb(220, 225, 234);
     width: 3vh;

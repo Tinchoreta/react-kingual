@@ -15,7 +15,7 @@ const ItemListContainer = ({ greeting }) => {
     const getData = new Promise(resolve => {
       setTimeout(() => {
         resolve(bbdd);
-      }, 3000)
+      }, 2000)
     })
     getData.then(res => {
       setListaCursos(res)

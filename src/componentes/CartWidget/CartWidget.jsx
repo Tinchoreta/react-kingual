@@ -5,7 +5,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 const CartWidget = () => {
   return (
     //12 items harcodeado
-    //profe no puedo hacer andar Fontawesome. Importo el CDN y hago todo correcto pero no hay forma
+    
     
     <div>
       <FontAwesomeIcon icon={faCartShopping} />
