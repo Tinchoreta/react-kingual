@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import bbdd from '../../bbdd/bbdd.json'
 import ItemList from '../ItemList/ItemList';
-
+import { useParams } from 'react-router-dom';
 
 
 
@@ -9,6 +9,7 @@ const ItemListContainer = ({ greeting }) => {
 
   const [listaCursos, setListaCursos] = useState([])
 
+  const {categoriaId} = useParams();
   // Usamos un efecto para cargar los datos del Json de cursos al montar el componente.
 
   useEffect(() => {
@@ -17,13 +18,15 @@ const ItemListContainer = ({ greeting }) => {
         resolve(bbdd);
       }, 2000)
     })
-    getData.then(res => {
-      setListaCursos(res)
-      //console.log(res)
-    });
+
+    if (categoriaId){
+      getData.then(res => {setListaCursos(res.filter(curso => curso.idioma === categoriaId))});
+    }
+    else
+    getData.then(res => { setListaCursos(res)});
     
 
-  }, [])
+  }, [categoriaId])
 
 
 

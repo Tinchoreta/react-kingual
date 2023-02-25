@@ -31,7 +31,7 @@ const NavBar = () => {
           <li className="nav-item dropdown">
             <NavLink
               className="nav-link dropdown-toggle"
-              to='/'
+              to=''
               id="navbarDropdown"
               role="button"
               data-bs-toggle="dropdown"
