@@ -15,11 +15,11 @@ const Item = ({ curso = {} }, { key }) => {
         <>
 
             <div className="card ocultar" key={key}>
-                <Link To={`/detalle/${curso.id}`}>
+                <Link to={`/detalle/${curso.id}`}>
                     <img src={pathImgCurso(`./${curso.imgUrl}`)} alt={curso.nombre} />
                 </Link>
                 <div>
-                     <Link To={`/detalle/${curso.id}`}>
+                     <Link to={`/detalle/${curso.id}`}>
                         <p>{curso.nombre}</p>
                     </Link>
                 </div>
