@@ -1,0 +1,79 @@
+.container {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.card {
+    border: 1px solid rgba(251, 251, 251);
+    box-shadow: 0px 6px 10px lightgray;
+    transition: 0.4s ease-out;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 500px;
+    margin: 10px;
+}
+
+.card img {
+    width: 230px;
+    display: block;
+    position: static;
+    text-align: center;
+}
+
+.card:hover {
+    background: whitesmoke;
+    box-shadow: 0px 15px 35px lightgray;
+    transition: 1s ease;
+    color:darkslategrey ;
+}
+
+.card p {
+    display: flex;
+    padding-top: 5px;
+    padding-left: 1px;
+    font-weight: 400;
+    font-size: 0.9em;
+    align-self: flex-start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p.idioma-curso {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .8em;    
+    margin-top: -25px;
+}
+
+.card div.align-btn {
+    text-align: center;
+}
+
+.card button {
+    border-color: rgba(0, 119, 182, 0.9);
+    color:azure;
+    background-color:darkcyan;
+    margin-bottom: 10px;
+}
+
+.card button:hover {
+    border-color: rgba(0,119,182);
+    color: mintcream;
+    /* background-color: whitesmoke; */
+}
+
+.card button:active {
+    color: mintcream;
+    background-color:aliceblue;
+}
+
+.card-button {
+    text-align: center;
+}
