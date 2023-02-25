@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import bbdd from '../../bbdd/bbdd.json'
-import Item from '../Item/Item';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
 
@@ -20,7 +20,7 @@ const ItemDetailsContainer = () => {
     })
 
  
-      getData.then(res => {setListaCursos(res.find(curso => curso.id === Parseint(detalleId)))});
+      getData.then(res => {setListaCursos(res.find(curso => curso.id === ParseInt(detalleId)))});
  
   }, [])
 
