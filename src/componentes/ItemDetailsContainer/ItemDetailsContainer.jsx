@@ -19,19 +19,16 @@ const ItemDetailsContainer = () => {
       }, 2000)
     })
 
-    if (detalleId){
-      getData.then(res => {setListaCursos(res.find(curso => curso.id === Parseint(detalleId)))});
-    }
  
-    
-
-  }, [detalleId])
+      getData.then(res => {setListaCursos(res.find(curso => curso.id === Parseint(detalleId)))});
+ 
+  }, [])
 
 
 
   return (
     <>
-      <ItemDetail curso={listaCursos} key = {listaCursos.id} />
+      <ItemDetail curso={listaCursos} />
       
     </>
   )
