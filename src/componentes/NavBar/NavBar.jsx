@@ -23,9 +23,9 @@ const NavBar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <NavLink className="nav-link" to='/'>
+            {/* <NavLink className="nav-link" to='/'>
               Principal <span className="sr-only">(current)</span>
-            </NavLink>
+            </NavLink> */}
           </li>
 
           <li className="nav-item dropdown">
@@ -43,7 +43,7 @@ const NavBar = () => {
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
             
               <NavLink className="dropdown-item" to='/categoria/english'>👑 Inglés</NavLink>
-              <NavLink className="dropdown-item" to='/categoria/chinese'>🎎 Chino </NavLink>
+              {/* <NavLink className="dropdown-item" to='/categoria/chinese'>🎎 Chino </NavLink> */}
               <NavLink className="dropdown-item" to='/categoria/portuguese'>
                 🥑 Portugés
               </NavLink>

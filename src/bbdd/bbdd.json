@@ -142,5 +142,76 @@
 
     }
 
+    ,
+
+    {
+        "id": 13,
+        "numCurso": "13",
+        "idioma": "russian",
+        "nombre": "Curso Ruso Elemental (A1)",
+        "nivel": "Básico A1",
+        "moneda": "Dólar",
+        "precio": "39.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
+        "imgUrl": "Curso-Ruso-Elemental-A1.jpg"
+    },
+
+    {
+        "id": 14,
+        "numCurso": "14",
+        "idioma": "russian",
+        "nombre": "Curso Portugués principiante (A2)",
+        "nivel": "Básico A2",
+        "moneda": "Dólar",
+        "precio": "59.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "imgUrl": "Curso-Ruso-Basico-A2.jpg"
+
+    },
+
+    {
+        "id": 15,
+        "numCurso": "15",
+        "idioma": "russian",
+        "nombre": "Curso Ruso Primer Nivel (B1)",
+        "nivel":"Primer Nivel B1",
+        "moneda": "Dólar",
+        "precio": "79.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "imgUrl": "Curso-Ruso-Primer-Nivel-B1.jpg"
+
+    },
+    {
+        "id": 15,
+        "numCurso": "15",
+        "idioma": "russian",
+        "nombre": "Curso Ruso Segundo Nivel (B2)",
+        "nivel":"Segundo Nivel B2",
+        "moneda": "Dólar",
+        "precio": "89.90",
+        "imgUrl": "Curso-Ruso-Segundo-Nivel-B2.jpg"
+    },
+    {
+        "id": 16,
+        "numCurso": "16",
+        "idioma": "russian",
+        "nombre": "Curso Ruso Tercer Nivel (C1)",
+        "nivel":"Tercer Nivel C1",
+        "moneda": "Dólar",
+        "precio": "89.90",
+        "imgUrl": "Curso-Ruso-Tercer-Nivel-C1.jpg"
+    },
+
+    {
+        "id": 17,
+        "numCurso": "17",
+        "idioma": "russian",
+        "nombre": "Curso Ruso Cuarto Nivel (C2)",
+        "nivel":"Cuarto Nivel C2",
+        "moneda": "Dólar",
+        "precio": "99.90",
+        "imgUrl": "Curso-Ruso-Cuarto-Nivel-C2.jpg"
+
+    }
 
 ]
