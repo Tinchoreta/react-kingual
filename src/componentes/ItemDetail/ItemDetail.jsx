@@ -14,7 +14,7 @@ const ItemDetail = ({ curso = {} }) => {
     return (
         <>
 
-            <div className="card ocultar" key={curso.id}>
+            <div className="cardDetail" key={curso.id}>
                 <img src={pathImgCurso(`./${curso.imgUrl}`)} alt={curso.nombre} />
                 <div>
                     <p>{curso.nombre}</p>

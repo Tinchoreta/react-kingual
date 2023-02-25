@@ -20,7 +20,7 @@ const ItemDetailsContainer = () => {
     })
 
  
-      getData.then(res => {setListaCursos(res.find(curso => curso.id === ParseInt(detalleId)))});
+      getData.then(res => {setListaCursos(res.find(curso => curso.id === parseInt(detalleId)))});
  
   }, [])
 

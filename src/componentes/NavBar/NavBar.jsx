@@ -57,9 +57,9 @@ const NavBar = () => {
             </div>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link justify-content-end" to='/cart'/>
+            <NavLink className="nav-link justify-content-end" to='/cart'>
               <CartWidget />
-            
+            </NavLink>
           </li>
         </ul>
       </div>
