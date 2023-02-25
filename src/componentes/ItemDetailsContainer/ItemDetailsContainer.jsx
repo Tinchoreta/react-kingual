@@ -16,7 +16,7 @@ const ItemDetailsContainer = () => {
     const getData = new Promise(resolve => {
       setTimeout(() => {
         resolve(bbdd);
-      }, 2000)
+      }, 1000)
     })
 
  
