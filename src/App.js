@@ -3,10 +3,10 @@ import React from 'react';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import NavBar from './componentes/NavBar/NavBar';
-import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer';
-import Cart from './componentes/Cart/Cart';
+import NavBar from './componentes/NavBar/NavBar.jsx';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
+import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer.jsx';
+import Cart from './componentes/Cart/Cart.jsx';
 
 
 function App() {
