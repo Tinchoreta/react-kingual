@@ -182,8 +182,8 @@
 
     },
     {
-        "id": 15,
-        "numCurso": "15",
+        "id": 16,
+        "numCurso": "16",
         "idioma": "russian",
         "nombre": "Curso Ruso Segundo Nivel (B2)",
         "nivel":"Segundo Nivel B2",
@@ -192,8 +192,8 @@
         "imgUrl": "Curso-Ruso-Segundo-Nivel-B2.jpg"
     },
     {
-        "id": 16,
-        "numCurso": "16",
+        "id": 17,
+        "numCurso": "17",
         "idioma": "russian",
         "nombre": "Curso Ruso Tercer Nivel (C1)",
         "nivel":"Tercer Nivel C1",
@@ -203,8 +203,8 @@
     },
 
     {
-        "id": 17,
-        "numCurso": "17",
+        "id": 18,
+        "numCurso": "18",
         "idioma": "russian",
         "nombre": "Curso Ruso Cuarto Nivel (C2)",
         "nivel":"Cuarto Nivel C2",
