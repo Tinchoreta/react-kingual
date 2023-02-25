@@ -32,8 +32,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-      <p>{greeting}</p>
-      <div className='container'>
+        <div className='container'>
         <ItemList data={listaCursos} />
       </div>
     </>
