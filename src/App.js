@@ -7,6 +7,7 @@ import NavBar from './componentes/NavBar/NavBar.jsx';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer.jsx';
 import Cart from './componentes/Cart/Cart.jsx';
+import NotFound from './componentes/NotFound/NotFound';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting='Categorias de cursos' />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/detalle/:detalleId' element={<ItemDetailsContainer />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
 
       </BrowserRouter>
