@@ -15,19 +15,23 @@ const ItemDetail = ({ curso = {} }) => {
         <>
             {
                 Object.entries(curso).length !== 0?
-                    <div className="cardDetail" key={curso.id}>
+                    <><div className="cardDetail" key={curso.id}>
                         <img src={pathImgCurso(`./${curso.imgUrl}`)} alt={curso.nombre} />
-                        <div>
-                            <p>{curso.nombre}</p>
-                            <p className="label-curso"> Nivel: {curso.nivel}</p>
+                        <div className='detalleCurso'>
+                            <h2>{curso.nombre}</h2>
+                            <p className="nivelCurso"> Nivel: {curso.nivel}</p>
+                            <p class="detalleCurso">Detalles: {curso.detalles}</p>
                             <p>{curso.moneda}: ${curso.precio}</p>
                         </div>
-                        <div>
-                            <ItemCount totalStock = {5} initialStock={0} itemTitle = {typeof(curso.nombre!=='undefined')? curso.nombre:"ItemTitle"} onAdd={onAdd} />
-                        </div>
+                    <div className='counter'>
+                        <ItemCount totalStock={5} initialStock={0} onAdd={onAdd} />
                     </div>
-                :<div>No se encontró curso</div>
+                    </div>
+                    </>
+                :<div>Buscando curso...</div>
+                
             }
+        
             
         </>  
     )

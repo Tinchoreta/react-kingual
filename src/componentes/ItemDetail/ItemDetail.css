@@ -21,7 +21,7 @@
 
 .cardDetail img {
     width: 500px;
-    display: block;
+    display: flex;
     position: static;
     text-align: center;
 }
@@ -33,6 +33,15 @@
     color:darkslategrey ;
 }
 
+.cardDetail .detalleCurso{
+    display: flex;
+    align-self: center;
+    word-wrap: break-word;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em;
+}
+
 .cardDetail p {
     display: flex;
     padding-top: 5px;
@@ -40,16 +49,15 @@
     font-weight: 400;
     font-size: 0.9em;
     align-self: flex-start;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.cardDetail p.idioma-curso {
+.cardDetail p.nivelCurso {
     text-transform: uppercase;
     font-weight: 400;
     font-size: .8em;    
-    margin-top: -25px;
+    margin-top: 5px;
 }
 
 .cardDetail div.align-btn {
@@ -59,8 +67,9 @@
 .cardDetail button {
     border-color: rgba(0, 119, 182, 0.9);
     color:azure;
-    background-color:darkcyan;
+    background-color:lightseagreen;
     margin-bottom: 10px;
+    border-radius: 6px;
 }
 
 .cardDetail button:hover {
@@ -76,4 +85,9 @@
 
 .cardDetail-button {
     text-align: center;
+}
+
+.detalleCurso {
+    word-wrap: break-word;
+    max-width: 100%;
 }

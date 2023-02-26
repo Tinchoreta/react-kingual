@@ -1,23 +1,28 @@
 .counter{
+    display: block;
     width: fit-content;
-    background-color: bisque;
+    background-color: lightskyblue;
     margin: auto;
-    padding: 1rem;
+    padding: 0.2rem;
     text-align: center;
+    width: 100%;
 }
 
+.title{
+    padding: 1rem;
+}
 .counter button:disabled{
-    color: black;
+    color: grey;
 }
 
 .counter .itemCounter button:disabled {
-    color: black;
+    color: lightgray;
     
 }
 
 .counter .itemCounter button {
     color: rgb(220, 225, 234);
-    width: 3vh;
+    width: 7vh;
     
 }
 
@@ -29,3 +34,8 @@
 .counter span {
     margin: 20px;
 }
+
+/* .itemCounter{
+    display: flex;
+    flex-direction: row;
+} */

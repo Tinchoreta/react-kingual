@@ -3,7 +3,7 @@ import './ItemCount.css'
 import React, { useState, useEffect } from 'react'
 
 
-const ItemCount = ({ totalStock ,  initialStock ,  itemTitle ,  onAdd }) => {
+const ItemCount = ({ totalStock ,  initialStock ,  onAdd }) => {
     const [stock, setStock] = useState(initialStock)
 
     const pullItem = ()=>{
@@ -25,7 +25,7 @@ const ItemCount = ({ totalStock ,  initialStock ,  itemTitle ,  onAdd }) => {
 
     return (
         <div className='counter'>
-            <h4 className='title'>{itemTitle}</h4>
+            
             <div className='itemCounter'>
                 <button className="pullItem" disabled={stock<=initialStock} onClick={pullItem}>-</button>
                 <span>{stock}</span>
