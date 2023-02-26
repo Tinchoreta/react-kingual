@@ -20,7 +20,7 @@ const ItemDetail = ({ curso = {} }) => {
                         <div className='detalleCurso'>
                             <h2>{curso.nombre}</h2>
                             <p className="nivelCurso"> Nivel: {curso.nivel}</p>
-                            <p class="detalleCurso">Detalles: {curso.detalles}</p>
+                            <p className="detalleCurso">Detalles: {curso.detalles}</p>
                             <p>{curso.moneda}: ${curso.precio}</p>
                         </div>
                     <div className='counter'>
