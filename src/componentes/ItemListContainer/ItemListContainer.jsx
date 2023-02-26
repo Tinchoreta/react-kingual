@@ -32,7 +32,7 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-        <div className='container'>
+      <div className='container'>
         <ItemList data={listaCursos} />
       </div>
     </>

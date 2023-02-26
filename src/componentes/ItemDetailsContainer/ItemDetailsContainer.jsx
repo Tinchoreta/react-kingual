@@ -28,8 +28,9 @@ const ItemDetailsContainer = () => {
 
   return (
     <>
-      <ItemDetail curso={listaCursos} />
-      
+        <div className="container">
+            <ItemDetail curso={listaCursos} />
+        </div>
     </>
   )
 }
