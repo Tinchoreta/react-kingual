@@ -1,7 +1,6 @@
 .counter{
     display: block;
     width: fit-content;
-    background-color: lightskyblue;
     margin: auto;
     padding: 0.2rem;
     text-align: center;
@@ -12,7 +11,7 @@
     padding: 1rem;
 }
 .counter button:disabled{
-    color: grey;
+    color: lightgray;
 }
 
 .counter .itemCounter button:disabled {
