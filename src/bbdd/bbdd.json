@@ -127,6 +127,7 @@
         "nivel":"C1",
         "moneda": "Dólar",
         "precio": "89.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
         "imgUrl": "Curso-Portuguese-Avanzado-C1.jpg"
     },
 
@@ -138,6 +139,7 @@
         "nivel":"C2",
         "moneda": "Dólar",
         "precio": "99.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
         "imgUrl": "Curso-Portuguese-Avanzado-C2.jpg"
 
     }
@@ -152,7 +154,7 @@
         "nivel": "Básico A1",
         "moneda": "Dólar",
         "precio": "39.90",
-        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el ruso desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
         "imgUrl": "Curso-Ruso-Elemental-A1.jpg"
     },
 
@@ -160,11 +162,11 @@
         "id": 14,
         "numCurso": "14",
         "idioma": "russian",
-        "nombre": "Curso Portugués principiante (A2)",
+        "nombre": "Curso Ruso principiante (A2)",
         "nivel": "Básico A2",
         "moneda": "Dólar",
         "precio": "59.90",
-        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el ruso que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
         "imgUrl": "Curso-Ruso-Basico-A2.jpg"
 
     },
@@ -177,7 +179,7 @@
         "nivel":"Primer Nivel B1",
         "moneda": "Dólar",
         "precio": "79.90",
-        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el portugués que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el ruso que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
         "imgUrl": "Curso-Ruso-Primer-Nivel-B1.jpg"
 
     },
@@ -189,6 +191,7 @@
         "nivel":"Segundo Nivel B2",
         "moneda": "Dólar",
         "precio": "89.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el ruso desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
         "imgUrl": "Curso-Ruso-Segundo-Nivel-B2.jpg"
     },
     {
@@ -199,6 +202,7 @@
         "nivel":"Tercer Nivel C1",
         "moneda": "Dólar",
         "precio": "89.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el ruso desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
         "imgUrl": "Curso-Ruso-Tercer-Nivel-C1.jpg"
     },
 
@@ -210,8 +214,83 @@
         "nivel":"Cuarto Nivel C2",
         "moneda": "Dólar",
         "precio": "99.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el ruso desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
         "imgUrl": "Curso-Ruso-Cuarto-Nivel-C2.jpg"
 
+    },
+
+    {
+        "id": 19,
+        "numCurso": "19",
+        "idioma": "spanish",
+        "nombre": "Curso Español Elemental (A1)",
+        "nivel": "Elemental A1",
+        "moneda": "Dólar",
+        "precio": "39.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el español desde el nivel inicial. El curso está pensado desde un nivel base, para que los interesados, se introduzcan en el idioma desde el inicio y puedan ir progresando a medida que avanza el curso.",
+        "imgUrl": "Curso-Spanish-Principiante-A1.jpg"
+    },
+
+    {
+        "id": 20,
+        "numCurso": "20",
+        "idioma": "spanish",
+        "nombre": "Curso Español principiante (A2)",
+        "nivel": "Básico A2",
+        "moneda": "Dólar",
+        "precio": "59.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el Español que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "imgUrl": "Curso-Spanish-Principiante-A2.jpg"
+
+    },
+
+    {
+        "id": 21,
+        "numCurso": "21",
+        "idioma": "spanish",
+        "nombre": "Curso Español Primer Nivel (B1)",
+        "nivel":"Primer Nivel B1",
+        "moneda": "Dólar",
+        "precio": "79.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el español que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "imgUrl": "Curso-Spanish-Intermedio-B1.jpg"
+
+    },
+    {
+        "id": 22,
+        "numCurso": "22",
+        "idioma": "spanish",
+        "nombre": "Curso Español Intermedio (B2)",
+        "nivel":"Intermedio B2",
+        "moneda": "Dólar",
+        "precio": "89.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el español que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "imgUrl": "Curso-Spanish-Intermedio-B1.jpg"
+    },
+    {
+        "id": 23,
+        "numCurso": "23",
+        "idioma": "spanish",
+        "nombre": "Curso Español Avanzado (C1)",
+        "nivel":"Avanzado C1",
+        "moneda": "Dólar",
+        "precio": "89.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el español que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "imgUrl": "Curso-Spanish-Avanzado-C1.jpg"
+    },
+
+    {
+        "id": 24,
+        "numCurso": "24",
+        "idioma": "spanish",
+        "nombre": "Curso Español Avanzado (C2)",
+        "nivel":"Avanzado C2",
+        "moneda": "Dólar",
+        "precio": "99.90",
+        "detalles": "Este curso va dirigido a todos los interesados en aprender y estudiar el español que ya tengan conocimiento del idioma. Se hace enfoque en la conversación, expandir el vocabulario y hablar sobre situaciones cotidianas y útiles",
+        "imgUrl": "Curso-Spanish-Avanzado-C2.jpg"
+
     }
+
 
 ]

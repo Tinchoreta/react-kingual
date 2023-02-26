@@ -13,6 +13,7 @@ const Item = ({ curso = {} }) => {
 
     return (
         <>
+        ¨{
             Object.entries(curso).length !== 0?
             <div className="card ocultar" key={curso.id}>
                 <Link to={`/detalle/${curso.id}`}>
@@ -28,6 +29,7 @@ const Item = ({ curso = {} }) => {
                 </div>
             </div>
             : <div>No encontrado</div>
+        }
         </>  
     )
 }

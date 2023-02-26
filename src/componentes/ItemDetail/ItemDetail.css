@@ -19,21 +19,21 @@
     margin: 10px;
 }
 
-.card img {
-    width: 230px;
+.cardDetail img {
+    width: 500px;
     display: block;
     position: static;
     text-align: center;
 }
 
-.card:hover {
+.cardDetail:hover {
     background: whitesmoke;
     box-shadow: 0px 15px 35px lightgray;
     transition: 1s ease;
     color:darkslategrey ;
 }
 
-.card p {
+.cardDetail p {
     display: flex;
     padding-top: 5px;
     padding-left: 1px;
@@ -45,35 +45,35 @@
     text-overflow: ellipsis;
 }
 
-.card p.idioma-curso {
+.cardDetail p.idioma-curso {
     text-transform: uppercase;
     font-weight: 400;
     font-size: .8em;    
     margin-top: -25px;
 }
 
-.card div.align-btn {
+.cardDetail div.align-btn {
     text-align: center;
 }
 
-.card button {
+.cardDetail button {
     border-color: rgba(0, 119, 182, 0.9);
     color:azure;
     background-color:darkcyan;
     margin-bottom: 10px;
 }
 
-.card button:hover {
+.cardDetail button:hover {
     border-color: rgba(0,119,182);
     color: mintcream;
     /* background-color: whitesmoke; */
 }
 
-.card button:active {
+.cardDetail button:active {
     color: mintcream;
     background-color:aliceblue;
 }
 
-.card-button {
+.cardDetail-button {
     text-align: center;
 }
