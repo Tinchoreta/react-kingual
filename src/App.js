@@ -8,7 +8,7 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer.jsx';
 import Cart from './componentes/Cart/Cart.jsx';
 import NotFound from './componentes/NotFound/NotFound';
-import cartContext from './context/cartContext';
+import cartContext from './context/CartContext';
 
 
 
