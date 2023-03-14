@@ -8,13 +8,16 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer.jsx';
 import Cart from './componentes/Cart/Cart.jsx';
 import NotFound from './componentes/NotFound/NotFound';
+import cartContext from './context/cartContext';
+
 
 
 function App() {
 
   return (
 
-    <>
+    <cartContext.Provider value={[]}>
+
       <BrowserRouter>
 
         <NavBar />
@@ -27,7 +30,8 @@ function App() {
         </Routes>
 
       </BrowserRouter>
-    </>
+    
+    </cartContext.Provider>
   );
 }
 
