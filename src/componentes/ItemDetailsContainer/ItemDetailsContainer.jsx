@@ -15,6 +15,7 @@ const ItemDetailsContainer = () => {
   useEffect(() => {
     const getData = new Promise(resolve => {
       setTimeout(() => {
+        
         resolve(bbdd);
       }, 1000)
     })
