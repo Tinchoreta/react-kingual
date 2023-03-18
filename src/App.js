@@ -26,7 +26,7 @@ function App() {
           <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting='Categorias de cursos' />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/detalle/:detalleId' element={<ItemDetailsContainer />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
 
       </BrowserRouter>
