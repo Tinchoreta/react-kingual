@@ -29,7 +29,8 @@ const CartProvider = ({children})=>{
 
     const removeProduct = (id)=> {
 
-        const newCartItems = cartItems.filter((cartItem) => cartItems.id !== id)
+        const newCartItems = cartItems.filter((cartItem) => cartItems.id !== id);
+        setCartItems(newCartItems);
 
     }
 
@@ -38,12 +39,14 @@ const CartProvider = ({children})=>{
     const addProduct = (item, quantity)=>{
 
         if(IsInCart(item.id)){
-            setCartItems(cartItems.map(product =>{
-                product.id === item.id ? 
+            setCartItems(
+                cartItems.map(
+                    product => product.id === item.id ? 
                 {...product, quantity: product.quantity + quantity}
                 :
                 product
-            }))
+            )
+            );
         }
         else {
 

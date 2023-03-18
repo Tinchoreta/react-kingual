@@ -7,7 +7,7 @@ import NavBar from './componentes/NavBar/NavBar.jsx';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer.jsx';
 import Cart from './componentes/Cart/Cart.jsx';
-import NotFound from './componentes/NotFound/NotFound';
+import NotFoundPage from './componentes/NotFoundPage/NotFoundPage';
 import cartContext from './context/CartContext';
 
 
