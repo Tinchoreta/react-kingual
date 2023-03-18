@@ -9,6 +9,7 @@ import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetails
 import Cart from './componentes/Cart/Cart.jsx';
 import NotFoundPage from './componentes/NotFoundPage/NotFoundPage';
 import cartContext from './context/CartContext';
+import Loader from './componentes/Loader/Loader';
 
 
 
@@ -17,7 +18,7 @@ function App() {
   return (
 
     <cartContext.Provider value={[]}>
-
+      
       <BrowserRouter>
 
         <NavBar />
@@ -30,7 +31,7 @@ function App() {
         </Routes>
 
       </BrowserRouter>
-    
+      
     </cartContext.Provider>
   );
 }
