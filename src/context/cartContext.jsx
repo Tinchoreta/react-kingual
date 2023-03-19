@@ -80,5 +80,5 @@ const totalQuantity = ()=>{
     )
 }
 
-export {CartProvider}
-export default CartContext;
+export default CartProvider;
+

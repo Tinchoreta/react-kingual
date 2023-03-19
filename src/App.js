@@ -18,10 +18,10 @@ function App() {
 
   return (
 
-    <CartProvider>
-      
+    
+      <>
       <BrowserRouter>
-
+      <CartProvider>
         <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting='Hola, bienvenido al carrito de compras de Kingual Education®.' />} />
@@ -31,9 +31,9 @@ function App() {
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
-      
-    </CartProvider>
+      </CartProvider>
+    </BrowserRouter>
+    </>
   );
 }
 
