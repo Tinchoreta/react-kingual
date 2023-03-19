@@ -13,6 +13,7 @@ const ItemDetail = ({ curso = {} }) => {
     const onAdd = (quantity)=>{
         console.log(`Compraste: ${quantity} de: ${curso.nombre}`)
         addProduct(curso, quantity);    
+        
     }
 
     return (
