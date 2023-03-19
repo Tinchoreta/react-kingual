@@ -10,7 +10,7 @@ const ItemDetail = ({ curso = {} }) => {
 
     const {addProduct} = useCartContext();
 
-    const onAdd = (item, quantity)=>{
+    const onAdd = (quantity)=>{
         console.log(`Compraste: ${quantity} de: ${curso.nombre}`)
         addProduct(curso, quantity);    
     }

@@ -10,9 +10,10 @@ const Item = ({ curso = {} }) => {
 
 const {addProduct} = useCartContext();
 
-    const onAdd = (item, quantity)=>{
+    const onAdd = (quantity)=>{
 
 
+        addProduct(curso, quantity) 
 //        console.log(cartItems);
             
             

@@ -1,6 +1,6 @@
 import React, {createContext, useState, useContext} from 'react'
 
-export const CartContext = createContext({value: []});
+const CartContext = createContext({value: []});
 
 export const useCartContext = () => useContext(CartContext); 
   
