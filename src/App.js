@@ -8,7 +8,7 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer.jsx';
 import Cart from './componentes/Cart/Cart.jsx';
 import NotFoundPage from './componentes/NotFoundPage/NotFoundPage';
-import CartContext from './context/CartContext';
+import CartProvider from './context/CartContext';
 import Footer from './componentes/Footer/Footer';
  
 
@@ -18,15 +18,7 @@ function App() {
 
   return (
 
-    <CartContext.Provider value={{
-
-        cartItems,
-        addProduct, 
-        removeProduct, 
-        clearCart, 
-        IsInCart
-        
-      }}>
+    <CartProvider>
       
       <BrowserRouter>
 
@@ -41,7 +33,7 @@ function App() {
         <Footer />
       </BrowserRouter>
       
-    </CartContext.Provider>
+    </CartProvider>
   );
 }
 
