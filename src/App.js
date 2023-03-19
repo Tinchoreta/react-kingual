@@ -18,7 +18,15 @@ function App() {
 
   return (
 
-    <CartContext.Provider value={[]}>
+    <CartContext.Provider value={{
+
+        cartItems,
+        addProduct, 
+        removeProduct, 
+        clearCart, 
+        IsInCart
+        
+      }}>
       
       <BrowserRouter>
 
