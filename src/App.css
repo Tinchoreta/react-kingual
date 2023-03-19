@@ -25,19 +25,3 @@ a {
   text-decoration: none;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #f44336;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  margin: 2rem auto;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #e53935;
-  cursor: pointer;
-}

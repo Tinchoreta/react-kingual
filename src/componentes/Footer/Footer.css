@@ -1,0 +1,54 @@
+footer {
+    background-color: #00B4D8;
+    background-image: url(../../assets/img/stacked-waves-haikei.svg);
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  footer p,
+  h5 {
+    color: rgba(250, 250, 250, 0.95);
+  }
+  
+  
+  .whatsapp {
+  
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    align-items: flex-end;
+    position: fixed;
+    justify-content: right;
+    bottom: 5%;  
+    right: 3%;
+    z-index: 10000000;
+  }
+  
+  .whatsapp img {
+  
+    width: 70px;
+    height: 70px;
+    
+  
+  }
+  
+  .btn {
+    display: block;
+    background-color: #f09254;
+    color: #fff;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: lightseagreen;
+    cursor: pointer;
+  }
+  

@@ -9,6 +9,7 @@ import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetails
 import Cart from './componentes/Cart/Cart.jsx';
 import NotFoundPage from './componentes/NotFoundPage/NotFoundPage';
 import CartContext from './context/CartContext';
+import Footer from './componentes/Footer/Footer';
  
 
 
@@ -29,7 +30,7 @@ function App() {
           <Route path='/detalle/:detalleId' element={<ItemDetailsContainer />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
-
+        <Footer />
       </BrowserRouter>
       
     </CartContext.Provider>
