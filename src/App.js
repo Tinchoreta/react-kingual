@@ -8,8 +8,8 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailsContainer from './componentes/ItemDetailsContainer/ItemDetailsContainer.jsx';
 import Cart from './componentes/Cart/Cart.jsx';
 import NotFoundPage from './componentes/NotFoundPage/NotFoundPage';
-import cartContext from './context/CartContext';
-import Loader from './componentes/Loader/Loader';
+import CartContext from './context/CartContext';
+ 
 
 
 
@@ -17,7 +17,7 @@ function App() {
 
   return (
 
-    <cartContext.Provider value={[]}>
+    <CartContext.Provider value={[]}>
       
       <BrowserRouter>
 
@@ -32,7 +32,7 @@ function App() {
 
       </BrowserRouter>
       
-    </cartContext.Provider>
+    </CartContext.Provider>
   );
 }
 

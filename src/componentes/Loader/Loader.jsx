@@ -22,9 +22,9 @@ const Loader = (loading) => {
     
     if (loadingState && loading) {
         return (
-            <div class="loader">
-                <div class="spinner"></div>
-                <div class="message">Cargando...</div>
+            <div className="loader">
+                <div className="spinner"></div>
+                <div className="message">Cargando...</div>
             </div>
         );
 
