@@ -56,6 +56,7 @@ const CartProvider = ({children})=>{
             setCartItems([...cartItems,{item, quantity}])
 
         }
+        console.log(cartItems)
     }
 
     //5) Total de productos en el carrito

@@ -2,18 +2,25 @@ import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import './Item.css'
 import { Link } from 'react-router-dom';
+import CartContext from '../../context/cartContext';
 
 const pathImgCurso = require.context('../../assets/img/', true) //, /\.jpg$/
 
 const Item = ({ curso = {} }) => {
 
+const {cartItems} = useContext(CartContext);
+
     const onAdd = (quantity)=>{
-        console.log(`Compraste: ${quantity} de: ${curso.nombre}`)
+        console.log(cartItems);
+            
+            // `Compraste: ${quantity} de: ${curso.nombre}`)
+
+        
     }
 
     return (
         <>
-        ¨{
+        {
             Object.entries(curso).length !== 0?
             <div className="card ocultar" key={curso.id}>
                 <Link to={`/detalle/${curso.id}`}>
@@ -32,6 +39,6 @@ const Item = ({ curso = {} }) => {
         }
         </>  
     )
-}
+} 
 
 export default Item
