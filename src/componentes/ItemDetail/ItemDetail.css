@@ -16,13 +16,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    width: 500px;
+    width: 650px;
     margin: 10px;
     background-color: rgb(216, 213, 236);
 }
 
 .cardDetail img {
-    width: 500px;
+    width: 650px;
+    height: 400px;
     display: flex;
     position: static;
     text-align: center;
@@ -49,7 +50,7 @@
     padding-top: 5px;
     padding-left: 1px;
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 0.9em;
     align-self: flex-start;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -58,12 +59,12 @@
 .cardDetail p.nivelCurso {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1.2em;    
+    font-size: 1em;    
     margin-top: 5px;
 }
 
 .cardDetail .precioCurso{
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
 .cardDetail div.align-btn {
