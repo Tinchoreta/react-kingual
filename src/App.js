@@ -10,8 +10,17 @@ import Cart from './componentes/Cart/Cart.jsx';
 import NotFoundPage from './componentes/NotFoundPage/NotFoundPage';
 import CartProvider from './context/CartContext';
 import Footer from './componentes/Footer/Footer';
+import ItemBase from './componentes/ItemBase/ItemBase';
  
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDim_mG0_vC8FwSzhygRVC7eucwCx4TLIk",
   authDomain: "kingual.firebaseapp.com",
@@ -22,6 +31,8 @@ const firebaseConfig = {
   measurementId: "G-C11LG3CYXB"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 function App() {
 
@@ -41,6 +52,7 @@ function App() {
         </Routes>
         <Footer />
       </CartProvider>
+      <ItemBase />
     </BrowserRouter>
     </>
   );
