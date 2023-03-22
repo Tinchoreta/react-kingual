@@ -22,6 +22,7 @@ const CartProvider = ({children})=>{
 
     const IsInCart = (id)=> {
         return cartItems.find((product)=> product.id === id)? true: false; 
+        
     }
 
     //3) Eliminar un producto del carrito
@@ -36,7 +37,7 @@ const CartProvider = ({children})=>{
     //4) Agregar un producto al carrito
 
     const addProduct = (item, quantity)=>{
-
+        console.log (quantity + " " + item.id)
         if(IsInCart(item.id)){
             setCartItems(
                 cartItems.map(
