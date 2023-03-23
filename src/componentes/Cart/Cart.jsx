@@ -41,7 +41,7 @@ function Cart() {
         <div className="cart-item" key={curso.item.id}>
           <span className="cart-item-name">{curso.item.nombre}</span>
           <span className="cart-item-price"> {curso.item.precio === undefined ? '' : `$${(+curso.item.precio).toFixed(2)}`}</span>
-          <span className="cart-item-quantity"> {curso.quantity === undefined ? '' : `Unindades: ${(+curso.quantity)}`}</span>
+          <span className="cart-item-quantity"> {curso.quantity === undefined ? '' : `Unidades: ${(+curso.quantity)}`}</span>
           <button className="cart-item-remove" onClick={() => removeProduct(curso)}>
             Quitar
           </button>

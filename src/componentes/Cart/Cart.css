@@ -61,10 +61,11 @@
   
   .cart-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     width: 100%;
     margin-top: 20px;
+    padding: 0.5em;
   }
   
   .cart-button {
@@ -92,7 +93,8 @@
   
   .cart-button-clear {
     background-color: #d9534f;
-    margin-left: 10px;
+    margin-left: .7em;
+    margin-right: .7em;
   }
   
   .cart-button-clear:hover {
