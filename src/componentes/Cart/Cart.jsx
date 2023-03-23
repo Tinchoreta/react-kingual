@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext'; 
+import Modal from 'react-modal';
 import './Cart.css';
 
 function Cart() {
@@ -63,7 +64,7 @@ function Cart() {
 
       {/* checkout abre ventana modal  */}
 
-      {showModal && (
+      <Modal isOpen={showModal} onRequestClose={handleCloseModal}>
         <div className="modal">
           <div className="modal-content">
             <h3>Resumen de Compra</h3>
@@ -82,7 +83,7 @@ function Cart() {
             </button>
           </div>
         </div>
-      )}
+      </Modal>
     </div>
 
 

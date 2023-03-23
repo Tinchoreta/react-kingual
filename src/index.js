@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Loader from './componentes/Loader/Loader';
 import './index.css';
+import Modal from 'react-modal';
 
+Modal.setAppElement('#root'); // o cualquier otro elemento raíz de tu aplicación
 
 
 
