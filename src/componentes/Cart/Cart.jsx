@@ -5,7 +5,7 @@ import './Cart.css';
 function Cart() {
   const { cartItems, addProduct, removeProduct, clearCart } = useCartContext();
 
-  const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const total = cartItems.reduce((acc, item) => item ? acc + item.precio : acc, 0);
 
   return (
     <div className="cart">
@@ -15,8 +15,8 @@ function Cart() {
       </div>
       {cartItems.map((item) => (
         <div className="cart-item" key={item.id}>
-          <span className="cart-item-name">{item.name}</span>
-          <span className="cart-item-price">{`$${item.price.toFixed(2)}`}</span>
+          <span className="cart-item-name">{item.nombre}</span>
+          <span className="cart-item-price">{`$${item.precio.toFixed(2)}`}</span>
           <button className="cart-item-remove" onClick={() => removeProduct(item)}>
             Quitar
           </button>
