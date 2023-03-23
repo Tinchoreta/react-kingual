@@ -20,41 +20,45 @@ const CartProvider = ({children})=>{
 
     //2) Verificar si un producto ya está en el carrito
 
-    const IsInCart = (id)=> {
-        return cartItems.find((product)=> product.id === id)? true: false; 
-        
-    }
+    const isInCart = (id) => {
+        console.log("ID a buscar en el carrito:", id);
+        const foundProduct = cartItems.find((product) => Number(product.item.id) === Number(id));
+        console.log("Producto encontrado:", foundProduct);
+        return foundProduct ? true : false;
+      };
 
     //3) Eliminar un producto del carrito
 
     const removeProduct = (id)=> {
 
-        const newCartItems = cartItems.filter((cartItem) => cartItems.id !== id);
+        const newCartItems = cartItems.filter((cartItem) => cartItem.id !== id);
         setCartItems(newCartItems);
 
     }
 
     //4) Agregar un producto al carrito
 
-    const addProduct = (item, quantity)=>{
-        console.log (quantity + " " + item.id)
-        if(IsInCart(item.id)){
-            setCartItems(
-                cartItems.map(
-                    product => product.id === item.id ? 
-                {...product, quantity: product.quantity + quantity}
-                :
-                product
-            )
-            );
+    const addProduct = (item, quantity) => {
+        console.log(quantity + " " + item.id);
+      
+        if (isInCart(item.id)) {
+          const updatedCartItems = cartItems.map((cartItem) => {
+            return cartItem.item.id === item.id
+              ? { ...cartItem, quantity: cartItem.quantity + quantity }
+              : cartItem;
+          });
+          setCartItems(updatedCartItems);
+        } else {
+          setCartItems([...cartItems, { item, quantity }]);
         }
-        else {
-
-            setCartItems([...cartItems,{item, quantity}])
-
-        }
-        console.log(cartItems)
-    }
+      
+        console.table(cartItems);
+      
+        const itemInCart = cartItems.find((cartItem) => cartItem.item.id === item.id);
+        console.log(
+          `Stock de ${item.nombre}: ${itemInCart ? itemInCart.quantity : 0} unidades`
+        );
+      };
 
     //5) Total de productos en el carrito
 
@@ -72,7 +76,7 @@ const totalQuantity = ()=>{
             addProduct, 
             removeProduct, 
             clearCart, 
-            IsInCart}}>
+            isInCart}}>
 
             {children}
              

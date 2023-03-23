@@ -12,9 +12,10 @@ const {addProduct} = useCartContext();
 
     const onAdd = (quantity)=>{
 
+        console.log("Estoy en Item, curso id: " + curso.id);
 
         addProduct(curso, quantity) 
-//        console.log(cartItems);
+        
             
             
 

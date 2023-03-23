@@ -5,6 +5,7 @@ import {doc, getDoc, getFirestore} from "firebase/firestore";
 
 const ItemBase = () => {
 
+const pathImg = require.context('../../assets/img/', true) //, /\.jpg$/
 const [product, setProduct] = useState()
 
     useEffect(() => {
@@ -19,10 +20,12 @@ const [product, setProduct] = useState()
       
       }, []);
       
-console.log(product)
+//console.log(product)
       
   return (
-    <div>ItemBase</div>
+    <div>ItemBase
+        <img src={pathImg(`./${product.imgUrl}`)} alt="Imagen" />
+    </div>
   )
 }
 
