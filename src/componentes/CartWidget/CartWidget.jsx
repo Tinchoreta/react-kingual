@@ -10,7 +10,7 @@ const CartWidget = () => {
   return (
         
 
-    <div>
+    <div className='cart-holder'>
       <FontAwesomeIcon className='cart-icon' icon={faCartShopping} />
       <span className='cart-count'>{totalQuantity()}</span>
 
