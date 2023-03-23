@@ -78,7 +78,9 @@ const totalQuantity = ()=>{
             addProduct, 
             removeProduct, 
             clearCart, 
-            isInCart}}>
+            isInCart,
+            totalQuantity
+            }}>
 
             {children}
              

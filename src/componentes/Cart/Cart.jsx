@@ -1,10 +1,11 @@
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext'; 
 import './Cart.css';
 
 function Cart() {
-  const { cartItems, addProduct, removeProduct, clearCart } = useCartContext();
+  const { cartItems, removeProduct, clearCart, totalQuantity } = useCartContext();
 
   const total = cartItems.reduce((acc, item) => { // sumariza los precios de los cursos en el carrito.
     if (item && item.precio !== undefined) {
@@ -45,11 +46,12 @@ function Cart() {
       <button className="cart-button cart-button-buy" onClick={handleShowModal}>
           Comprar cursos
         </button>
+        {}
         <button className="cart-button cart-button-clear" onClick={clearCart}>
-          Limpiar
+          Vaciar carrito
         </button>
         <button className="cart-button cart-button-continue">
-          <Link to="/">Seguir añadiendo al carrito</Link>
+          <Link to="/">Seguir comprando</Link>
         </button>
       </div>
 
@@ -78,7 +80,7 @@ function Cart() {
     </div>
 
 
-    </div>
+    
   );
 }
 
