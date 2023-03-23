@@ -1,16 +1,30 @@
 
+import { useState } from 'react';
 import { useCartContext } from '../../context/CartContext'; 
 import './Cart.css';
 
 function Cart() {
   const { cartItems, addProduct, removeProduct, clearCart } = useCartContext();
 
-  const total = cartItems.reduce((acc, item) => {
+  const total = cartItems.reduce((acc, item) => { // sumariza los precios de los cursos en el carrito.
     if (item && item.precio !== undefined) {
-      return acc + (+item.precio);
+      return acc + (+item.precio); // +item.precio convierte en número al precio en caso de que sea un string
     }
     return acc;
   }, 0);
+
+  // Manejo de la ventana modal de checkout 
+
+  
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   return (
     <div className="cart">
@@ -28,13 +42,42 @@ function Cart() {
         </div>
       ))}
       <div className="cart-buttons">
-        <button className="cart-button cart-button-add" onClick={addProduct}>
-          Agregar
+      <button className="cart-button cart-button-buy" onClick={handleShowModal}>
+          Comprar cursos
         </button>
         <button className="cart-button cart-button-clear" onClick={clearCart}>
           Limpiar
         </button>
+        <button className="cart-button cart-button-continue">
+          <Link to="/">Seguir añadiendo al carrito</Link>
+        </button>
       </div>
+
+      {/* checkout abre ventana modal  */}
+
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <h3>Resumen de Compra</h3>
+            {cartItems.map((item) => (
+              <div className="modal-item" key={item.id}>
+                <span>{item.nombre}</span>
+                <span>{`$${(+item.precio).toFixed(2)}`}</span>
+              </div>
+            ))}
+            <div className="modal-total">
+              <span>Total:</span>
+              <span>{`$${total.toFixed(2)}`}</span>
+            </div>
+            <button className="modal-button-close" onClick={handleCloseModal}>
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+
+
     </div>
   );
 }
