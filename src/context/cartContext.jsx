@@ -23,7 +23,7 @@ const CartProvider = ({children})=>{
     const isInCart = (id) => {
         console.log("ID a buscar en el carrito:", id);
         const foundProduct = cartItems.find((product) => Number(product.item.id) === Number(id));
-        console.log("Producto encontrado:", foundProduct);
+        console.log("Producto encontrado:", !!foundProduct);
         return !!foundProduct;  //? true : false;
       };
 
@@ -51,12 +51,12 @@ const CartProvider = ({children})=>{
           console.table(updatedCartItems);
         } else {
           setCartItems([...cartItems, { item, quantity }]);
-          // console.table(updatedCartItems);
+           console.table(cartItems + " en el else de addProduct");
         }
       
         
       
-        const itemInCart = cartItems.find((cartItem) => cartItem.item.id === item.id);
+        const itemInCart = cartItems.find((cartItem) => Number(cartItem.item.id) === item.id);
         console.log(
           `Stock de ${item.nombre}: ${itemInCart ? itemInCart.quantity : 0} unidades`
         );

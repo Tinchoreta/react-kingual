@@ -9,8 +9,10 @@ function Cart() {
 
   const total = cartItems.reduce((acc, item) => { // sumariza los precios de los cursos en el carrito.
     if (item && item.precio !== undefined) {
+      console.log(item + " item")
       return acc + (+item.precio); // +item.precio convierte en número al precio en caso de que sea un string
     }
+    console.log(acc + " acumulador de precios");
     return acc;
   }, 0);
 
@@ -40,8 +42,12 @@ function Cart() {
           <button className="cart-item-remove" onClick={() => removeProduct(item)}>
             Quitar
           </button>
+
         </div>
       ))}
+          <div className='cart-total-courses'>
+            <span className="cart-total">{`Total de cursos: ${totalQuantity()}`}</span>
+          </div>
       <div className="cart-buttons">
       <button className="cart-button cart-button-buy" onClick={handleShowModal}>
           Comprar cursos
