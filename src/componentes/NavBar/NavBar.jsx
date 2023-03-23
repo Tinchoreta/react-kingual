@@ -55,7 +55,7 @@ const NavBar = () => {
           </li>
           <li className="nav-item">
 
-              <NavLink className="nav-link" to='/cart'>
+            <NavLink className="nav-link" to='/cart'>
               <CartWidget />
             </NavLink>
           </li>

@@ -8,18 +8,18 @@ const pathImgCurso = require.context('../../assets/img/', true) //, /\.jpg$/
 
 const ItemDetail = ({ curso = {} }) => {
 
-    const {addProduct} = useCartContext();
+    const { addProduct } = useCartContext();
 
-    const onAdd = (quantity)=>{
+    const onAdd = (quantity) => {
         console.log(`Compraste: ${quantity} de: ${curso.nombre}`)
-        addProduct(curso, quantity);    
-        
+        addProduct(curso, quantity);
+
     }
 
     return (
         <>
             {
-                Object.entries(curso).length !== 0?
+                Object.entries(curso).length !== 0 ?
                     <><div className="cardDetail" key={curso.id}>
                         <img src={pathImgCurso(`./${curso.imgUrl}`)} alt={curso.nombre} />
                         <div className='detalleCurso'>
@@ -28,17 +28,17 @@ const ItemDetail = ({ curso = {} }) => {
                             <p className="detalleCurso">Detalles: {curso.detalles}</p>
                             <p className="precioCurso" >{curso.moneda}: ${curso.precio}</p>
                         </div>
-                    <div className='counter'>
-                        <ItemCount totalStock={5} initialStock={0} onAdd={onAdd} />
-                    </div>
+                        <div className='counter'>
+                            <ItemCount totalStock={5} initialStock={0} onAdd={onAdd} />
+                        </div>
                     </div>
                     </>
-                :<p>Buscando curso...</p>
-                
+                    : <p>Buscando curso...</p>
+
             }
-        
-            
-        </>  
+
+
+        </>
     )
 }
 

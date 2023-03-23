@@ -13,9 +13,9 @@ Modal.setAppElement('#root'); // o cualquier otro elemento ra√≠z de tu aplicaci√
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
-    <Loader loading= {true} />
-    
+
+    <Loader loading={true} />
+
 
   </React.StrictMode>
 );

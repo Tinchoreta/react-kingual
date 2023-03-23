@@ -1,4 +1,11 @@
-.navbar{height:100px; padding-top:20px;}
+.navbar {
+    height: 100px;
+    padding-top: 20px;
+}
 
-.dropdown-menu>li{padding:5px; border-bottom:1px solid white;border-left:1px 
-           solid white;border-right:1px solid white }
+.dropdown-menu>li {
+    padding: 5px;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white
+}

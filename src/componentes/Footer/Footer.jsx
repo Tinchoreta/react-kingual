@@ -21,19 +21,19 @@ const Footer = () => {
 
                         <div className="row mt-2">
 
-                        <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-                            <ul className="fa-ul" style={{ marginLeft: "1.65em" }}>
-                                <li className="mb-3">
-                                    <span className="fa-li"><i className="fas fa-envelope"></i></span><span
-                                        className="ms-2">kingualeducation@kged.net</span>
-                                </li>
-                                <li className="mb-3">
-                                    <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-2">+549 351 802
-                                        0674
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
+                            <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
+                                <ul className="fa-ul" style={{ marginLeft: "1.65em" }}>
+                                    <li className="mb-3">
+                                        <span className="fa-li"><i className="fas fa-envelope"></i></span><span
+                                            className="ms-2">kingualeducation@kged.net</span>
+                                    </li>
+                                    <li className="mb-3">
+                                        <span className="fa-li"><i className="fas fa-phone"></i></span><span className="ms-2">+549 351 802
+                                            0674
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
 
                         </div>
 

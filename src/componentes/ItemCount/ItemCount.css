@@ -1,4 +1,4 @@
-.counter{
+.counter {
     display: block;
     width: fit-content;
     margin: auto;
@@ -7,27 +7,28 @@
     width: 100%;
 }
 
-.title{
+.title {
     padding: 1rem;
 }
-.counter button:disabled{
+
+.counter button:disabled {
     color: lightgray;
 }
 
 .counter .itemCounter button:disabled {
     color: lightgray;
-    
+
 }
 
 .counter .itemCounter button {
     color: rgb(220, 225, 234);
     width: 7vh;
-    
+
 }
 
 .counter .itemCounter button:active {
     color: mintcream;
-    background-color:burlywood;
+    background-color: burlywood;
 }
 
 .counter span {

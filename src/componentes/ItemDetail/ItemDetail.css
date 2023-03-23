@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    
+
 }
 
 
@@ -33,10 +33,10 @@
     background: whitesmoke;
     box-shadow: 0px 15px 35px lightgray;
     transition: 1s ease;
-    color:darkslategrey ;
+    color: darkslategrey;
 }
 
-.cardDetail .detalleCurso{
+.cardDetail .detalleCurso {
     display: flex;
     align-self: center;
     word-wrap: break-word;
@@ -59,11 +59,11 @@
 .cardDetail p.nivelCurso {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1em;    
+    font-size: 1em;
     margin-top: 5px;
 }
 
-.cardDetail .precioCurso{
+.cardDetail .precioCurso {
     font-size: 1.4em;
 }
 
@@ -73,21 +73,21 @@
 
 .cardDetail button {
     border-color: rgba(0, 119, 182, 0.9);
-    color:azure;
-    background-color:lightseagreen;
+    color: azure;
+    background-color: lightseagreen;
     margin-bottom: 10px;
     border-radius: 6px;
 }
 
 .cardDetail button:hover {
-    border-color: rgba(0,119,182);
+    border-color: rgba(0, 119, 182);
     color: mintcream;
     /* background-color: whitesmoke; */
 }
 
 .cardDetail button:active {
     color: mintcream;
-    background-color:aliceblue;
+    background-color: aliceblue;
 }
 
 .cardDetail-button {

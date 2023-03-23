@@ -31,7 +31,7 @@
     background: whitesmoke;
     box-shadow: 0px 15px 35px lightgray;
     transition: 1s ease;
-    color:rgb(25, 48, 48) ;
+    color: rgb(25, 48, 48);
 }
 
 .card p {
@@ -45,13 +45,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: rgb(59, 121, 182);
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 .card p.idioma-curso {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: .8em;    
+    font-size: .8em;
     margin-top: -25px;
 }
 
@@ -61,20 +61,20 @@
 
 .card button {
     border-color: rgba(0, 119, 182, 0.9);
-    color:azure;
+    color: azure;
     background-color: lightslategrey;
     margin-bottom: 10px;
     border-radius: 8px;
 }
 
 .card button:enabled:hover {
-    border-color: rgba(0,119,182);
+    border-color: rgba(0, 119, 182);
     color: mintcream;
 }
 
 .card button:active {
     color: mintcream;
-    background-color:aliceblue;
+    background-color: aliceblue;
 }
 
 .card-button {

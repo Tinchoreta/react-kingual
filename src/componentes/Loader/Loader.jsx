@@ -15,11 +15,11 @@ const Loader = (loading) => {
         }, 3000);
 
         return () => {
-            
+
         }
     }, [])
 
-    
+
     if (loadingState && loading) {
         return (
             <div className="loader">
@@ -29,17 +29,17 @@ const Loader = (loading) => {
         );
 
     }
-    else{
-        return(
-      <App />
-      );
+    else {
+        return (
+            <App />
+        );
 
     }
 
-        
-        
-        
-      
+
+
+
+
 }
 
 export default Loader

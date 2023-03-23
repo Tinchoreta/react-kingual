@@ -9,7 +9,7 @@ const ItemListContainer = ({ greeting }) => {
 
   const [listaCursos, setListaCursos] = useState([])
 
-  const {categoriaId} = useParams();
+  const { categoriaId } = useParams();
   // Usamos un efecto para cargar los datos del Json de cursos al montar el componente.
 
   useEffect(() => {
@@ -19,12 +19,12 @@ const ItemListContainer = ({ greeting }) => {
       }, 2000)
     })
 
-    if (categoriaId){
-      getData.then(res => {setListaCursos(res.filter(curso => curso.idioma === categoriaId))});
+    if (categoriaId) {
+      getData.then(res => { setListaCursos(res.filter(curso => curso.idioma === categoriaId)) });
     }
     else
-    getData.then(res => { setListaCursos(res)});
-    
+      getData.then(res => { setListaCursos(res) });
+
 
   }, [categoriaId])
 
