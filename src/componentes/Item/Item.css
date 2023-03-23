@@ -10,7 +10,7 @@
 
 .card {
     border: 1px solid rgba(251, 251, 251);
-    box-shadow: 0px 6px 10px lightgray;
+    box-shadow: 0px 6px 6px lightgray;
     transition: 0.4s ease-out;
     justify-content: center;
     align-items: center;
@@ -38,11 +38,13 @@
     padding-top: 5px;
     padding-left: 1px;
     font-weight: 400;
-    font-size: 0.9em;
+    font-size: 0.8em;
     align-self: flex-start;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: rgb(59, 121, 182);
+    text-transform:uppercase;
 }
 
 .card p.idioma-curso {

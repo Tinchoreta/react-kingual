@@ -24,7 +24,7 @@ const CartProvider = ({children})=>{
         console.log("ID a buscar en el carrito:", id);
         const foundProduct = cartItems.find((product) => Number(product.item.id) === Number(id));
         console.log("Producto encontrado:", foundProduct);
-        return foundProduct ? true : false;
+        return !!foundProduct;  //? true : false;
       };
 
     //3) Eliminar un producto del carrito
@@ -48,11 +48,13 @@ const CartProvider = ({children})=>{
               : cartItem;
           });
           setCartItems(updatedCartItems);
+          console.table(updatedCartItems);
         } else {
           setCartItems([...cartItems, { item, quantity }]);
+          // console.table(updatedCartItems);
         }
       
-        console.table(cartItems);
+        
       
         const itemInCart = cartItems.find((cartItem) => cartItem.item.id === item.id);
         console.log(
