@@ -71,10 +71,11 @@ function Cart() {
         <div className="modal">
           <div className="modal-content">
             <h3>Resumen de Compra</h3>
-            {cartItems.map((item) => (
-              <div className="modal-item" key={item.id}>
-                <span>{item.nombre}</span>
-                <span>{`$${(+item.precio).toFixed(2)}`}</span>
+            {cartItems.map((curso) => (
+              <div className="modal-item" key={curso.item.id}>
+                <span>{curso.item.nombre}</span>
+                <span>{`$${(+curso.item.precio).toFixed(2)}`}</span>
+                <span>{curso.quantity}</span>
               </div>
             ))}
             <div className="modal-total">

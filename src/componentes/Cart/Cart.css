@@ -104,7 +104,7 @@
   }
 
   .cart-button-buy {
-    background-color: #238f0e; /* Cambia este color a tu gusto */
+    background-color: #238f0e; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -116,11 +116,11 @@
   }
   
   .cart-button-buy:hover {
-    background-color: #145308; /* Cambia este color a tu gusto */
+    background-color: #145308; 
   }
 
   .cart-button-buy:active {
-    background-color: #1d9405; /* Cambia este color a tu gusto */
+    background-color: #1d9405; 
   }
 
   .modal {
