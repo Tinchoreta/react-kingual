@@ -52,17 +52,20 @@ function Cart() {
       <div className='cart-total-courses'>
         <span className="cart-total">{`Total de cursos: ${totalQuantity()}`}</span>
       </div>
+
       <div className="cart-buttons">
-        <button className="cart-button cart-button-buy" onClick={handleShowModal}>
-          Comprar cursos
-        </button>
-        { }
         <button className="cart-button cart-button-clear" onClick={clearCart}>
           Vaciar carrito
         </button>
         <button className="cart-button cart-button-continue">
           <Link to="/">Seguir comprando</Link>
         </button>
+        <button className="cart-button cart-button-buy" onClick={handleShowModal}>
+          Comprar cursos
+        </button>
+
+
+
       </div>
 
       {/* checkout abre ventana modal  */}

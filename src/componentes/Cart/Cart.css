@@ -88,21 +88,7 @@
   }
   
   .cart-button-continue {
-    margin-right: 2em;
-  }
-  
-  .cart-button-clear {
-    background-color: #d9534f;
-    margin-left: .7em;
     margin-right: .7em;
-  }
-  
-  .cart-button-clear:hover {
-    background-color: #c9302c;
-  }
-  
-  .cart-button-clear:active {
-    background-color: #ac2925;
   }
 
   .cart-button-buy {
@@ -124,8 +110,22 @@
   .cart-button-buy:active {
     background-color: #1d9405; 
   }
+  
+  .cart-button-clear {
+    background-color: #d9534f;
+    margin-left: .7em;
+    margin-right: .7em;
+  }
+  
+  .cart-button-clear:hover {
+    background-color: #c9302c;
+  }
+  
+  .cart-button-clear:active {
+    background-color: #ac2925;
+  }
 
-  .modal {
+   .modal {
     position: fixed;
     top: 50%;
     left: 50%;
