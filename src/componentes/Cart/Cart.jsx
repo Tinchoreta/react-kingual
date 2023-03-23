@@ -8,14 +8,15 @@ import './Cart.css';
 function Cart() {
   const { cartItems, removeProduct, clearCart, totalQuantity } = useCartContext();
 
-  const total = cartItems.reduce((acc, item) => { // sumariza los precios de los cursos en el carrito.
+  const total = cartItems.length>0?cartItems.reduce((acc, item) => { // sumariza los precios de los cursos en el carrito.
     if (item && item.precio !== undefined) {
       console.log(item + " item")
       return acc + (+item.precio); // +item.precio convierte en número al precio en caso de que sea un string
     }
     console.log(acc + " acumulador de precios");
+    console.log(cartItems.length + " cuanto cotiza");
     return acc;
-  }, 0);
+  }, 0):0;
 
   // Manejo de la ventana modal de checkout 
 
@@ -34,18 +35,20 @@ function Cart() {
     <div className="cart">
       <div className="cart-header">
         <h2>Carrito de Compras</h2>
-        <span className="cart-total">{`Total: $${total.toFixed(2)}`}</span>
+        <span className="cart-total">{`Total: $${parseFloat(total).toFixed(2)}`}</span>
       </div>
-      {cartItems.map((item) => (
-        <div className="cart-item" key={item.id}>
-          <span className="cart-item-name">{item.nombre}</span>
-          <span className="cart-item-price"> {item.precio === undefined?'': `$${(+item.precio).toFixed(2)}`}</span>
-          <button className="cart-item-remove" onClick={() => removeProduct(item)}>
+      { cartItems.length>0? cartItems.map((curso) => (
+        <div className="cart-item" key={curso.item.id}>
+          <span className="cart-item-name">{curso.item.nombre}</span>
+          <span className="cart-item-price"> {curso.item.precio === undefined?'': `$${(+curso.item.precio).toFixed(2)}`}</span>
+          <span className="cart-item-quantity"> {curso.quantity === undefined?'': `Unindades: ${(+curso.quantity)}`}</span>
+          <button className="cart-item-remove" onClick={() => removeProduct(curso)}>
             Quitar
           </button>
 
         </div>
-      ))}
+        )):<div>No hay items</div>
+      }
           <div className='cart-total-courses'>
             <span className="cart-total">{`Total de cursos: ${totalQuantity()}`}</span>
           </div>
