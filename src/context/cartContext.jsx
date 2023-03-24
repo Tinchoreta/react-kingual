@@ -31,7 +31,7 @@ const CartProvider = ({ children }) => {
 
   const removeProduct = (id) => {
 
-    const newCartItems = cartItems.filter((cartItem) => cartItem.id !== id);
+    const newCartItems = cartItems.filter((cartItem) => cartItem.item.id !== id);
     setCartItems(newCartItems);
 
   }
