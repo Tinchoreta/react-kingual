@@ -10,7 +10,7 @@ import Cart from './componentes/Cart/Cart.jsx';
 import NotFoundPage from './componentes/NotFoundPage/NotFoundPage';
 import CartProvider from './context/CartContext';
 import Footer from './componentes/Footer/Footer';
-import ItemsBase from './componentes/ItemsBase/ItemsBase';
+
 
 
 // Import the functions you need from the SDKs you need
@@ -51,7 +51,6 @@ function App() {
             <Route path='*' element={<NotFoundPage />} />
           </Routes>
           <Footer />
-          <ItemsBase />
         </CartProvider>
 
       </BrowserRouter>

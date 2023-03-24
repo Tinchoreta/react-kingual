@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import bbdd from '../../bbdd/bbdd.json' //ya no uso el mock de bbdd sino que utilizo firebase
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 
 
@@ -19,6 +19,7 @@ const ItemListContainer = () => {
     const db = getFirestore();
 
     const cursoRefCollection = collection(db, 'cursos');
+    
     getDocs(cursoRefCollection).then((snapshot) => {
       if (snapshot === 0) {
         console.log("No hay resultados")
@@ -28,10 +29,17 @@ const ItemListContainer = () => {
     })
 
     if (categoriaId) {
-      getData.then(res => { setListaCursos(res.filter(curso => curso.idioma === categoriaId)) });
+      const cursoPorCategoria = query(cursoRefCollection, where('idioma', '==', categoriaId));
+      getDocs(cursoPorCategoria).then((snapshot) => {
+        if (snapshot === 0) {
+          console.log("No hay resultados cuando busco por categoria")
+        }
+        setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+  
+      })
     }
     else
-      getData.then(res => { setListaCursos(res) });
+    getDocs(cursoRefCollection).then((snapshot) =>  setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))))
 
 
   }, [categoriaId])
