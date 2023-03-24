@@ -37,7 +37,7 @@ const totalCartItems = calculateTotalQuantity();
           <span className="cart-item-name">{curso.item.nombre}</span>
           <span className="cart-item-price"> {curso.item.precio === undefined ? '' : `$${(+curso.item.precio).toFixed(2)}`}</span>
           <span className="cart-item-quantity"> {curso.quantity === undefined ? '' : `Unidades: ${(+curso.quantity)}`}</span>
-          <button className="cart-item-remove" onClick={() => removeProduct(curso)}>
+          <button className="cart-item-remove" onClick={() => removeProduct(curso.item.id)}>
             Quitar
           </button>
 
