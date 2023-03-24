@@ -6,17 +6,12 @@ import Modal from 'react-modal';
 import './Cart.css';
 
 function Cart() {
-  const { cartItems, removeProduct, clearCart, totalQuantity } = useCartContext();
+  const { cartItems, removeProduct, clearCart, calculateTotalQuantity,
+      calculateTotalCartPrice } = useCartContext();
 
-  const total = cartItems.length > 0 ? cartItems.reduce((acc, item) => { // sumariza los precios de los cursos en el carrito.
-    if (item && item.precio !== undefined) {
-      console.log(item + " item")
-      return acc + (+item.precio); // +item.precio convierte en número al precio en caso de que sea un string
-    }
-    console.log(acc + " acumulador de precios");
-    console.log(cartItems.length + " cuanto cotiza");
-    return acc;
-  }, 0) : 0;
+const total = calculateTotalCartPrice();
+
+const totalCartItems = calculateTotalQuantity();
 
   // Manejo de la ventana modal de checkout 
 
@@ -50,7 +45,7 @@ function Cart() {
       )) : <div>No hay items</div>
       }
       <div className='cart-total-courses'>
-        <span className="cart-total">{`Total de cursos: ${totalQuantity()}`}</span>
+        <span className="cart-total">{`Total de cursos: ${totalCartItems}`}</span>
       </div>
 
       <div className="cart-buttons">

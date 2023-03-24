@@ -6,13 +6,13 @@ import './CartWidget.css'
 
 const CartWidget = () => {
 
-  const { totalQuantity } = useCartContext();
+  const { calculateTotalQuantity } = useCartContext();
   return (
 
 
     <div className='cart-holder'>
       <FontAwesomeIcon className='cart-icon' icon={faCartShopping} />
-      <span className='cart-count'>{totalQuantity()}</span>
+      <span className='cart-count'>{calculateTotalQuantity()}</span>
 
 
     </div>

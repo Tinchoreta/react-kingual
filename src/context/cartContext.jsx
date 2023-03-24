@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext } from 'react'
 
-const CartContext = createContext({ value: [] });
+const CartContext = createContext( null );
 
 export const useCartContext = () => useContext(CartContext);
 
@@ -64,12 +64,27 @@ const CartProvider = ({ children }) => {
 
   //5) Total de productos en el carrito
 
-  const totalQuantity = () => {
+  const calculateTotalQuantity = () => {
 
     let total = 0;
     cartItems.forEach((item) => total += (item.quantity));
     return total;
   }
+
+  //6) Total en $$ de los productos añadidos al carrito
+
+    const calculateTotalCartPrice = () => {
+    let total = 0;
+    for (let i = 0; i < cartItems.length; i++) {
+      const curso = cartItems[i];
+      if (curso.item && curso.quantity) {
+        const itemTotal = curso.item.precio * curso.quantity;
+        total += itemTotal;
+      }
+    }
+    return total;
+  };
+
 
   return (
 
@@ -79,7 +94,8 @@ const CartProvider = ({ children }) => {
       removeProduct,
       clearCart,
       isInCart,
-      totalQuantity
+      calculateTotalQuantity,
+      calculateTotalCartPrice
     }}>
 
       {children}
