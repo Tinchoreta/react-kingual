@@ -1,22 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import bbdd from '../../bbdd/bbdd.json'
+// import bbdd from '../../bbdd/bbdd.json' //ya no uso el mock de bbdd sino que utilizo firebase
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 
 
-const ItemListContainer = ({ greeting }) => {
+
+const ItemListContainer = () => {
 
   const [listaCursos, setListaCursos] = useState([])
 
   const { categoriaId } = useParams();
   // Usamos un efecto para cargar los datos del Json de cursos al montar el componente.
 
+  
   useEffect(() => {
-    const getData = new Promise(resolve => {
-      setTimeout(() => {
-        resolve(bbdd);
-      }, 2000)
+    const db = getFirestore();
+
+    const cursoRefCollection = collection(db, 'cursos');
+    getDocs(cursoRefCollection).then((snapshot) => {
+      if (snapshot === 0) {
+        console.log("No hay resultados")
+      }
+      setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+
     })
 
     if (categoriaId) {

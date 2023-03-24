@@ -11,7 +11,7 @@ const ItemsBase = () => {
   useEffect(() => {
     const db = getFirestore();
 
-    const cursoRefCollection = collection(db, 'items');
+    const cursoRefCollection = collection(db, 'cursos');
     getDocs(cursoRefCollection).then((snapshot) => {
       if (snapshot === 0) {
         console.log("No hay resultados")

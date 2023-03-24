@@ -11,7 +11,7 @@ const ItemBase = () => {
   useEffect(() => {
     const db = getFirestore();
 
-    const cursoRef = doc(db, "items", "1");
+    const cursoRef = doc(db, "cursos", "1");
     getDoc(cursoRef).then((snapshot) => {
       if (snapshot.exists()) {
         setProduct({ id: snapshot.id, ...snapshot.data() });

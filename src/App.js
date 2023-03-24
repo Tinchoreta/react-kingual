@@ -44,8 +44,8 @@ function App() {
         <CartProvider>
           <NavBar />
           <Routes>
-            <Route path='/' element={<ItemListContainer greeting='Hola, bienvenido al carrito de compras de Kingual Education®.' />} />
-            <Route path='/categoria/:categoriaId' element={<ItemListContainer greeting='Categorias de cursos' />} />
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/categoria/:categoriaId' element={<ItemListContainer />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/detalle/:detalleId' element={<ItemDetailsContainer />} />
             <Route path='*' element={<NotFoundPage />} />
