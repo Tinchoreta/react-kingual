@@ -63,33 +63,41 @@ const totalCartItems = calculateTotalQuantity();
 
       </div>
 
-      {/* checkout abre ventana modal  */}
+      {/* Checkout abre ventana modal  */}
 
       <Modal isOpen={showModal} onRequestClose={handleCloseModal}>
         <div className="modal">
           <div className="modal-content">
-            <h3>Resumen de Compra</h3>
-            {cartItems.map((curso) => (
-              <div className="modal-item" key={curso.item.id}>
-                <span>{curso.item.nombre}</span>
-                <span>{`$${(+curso.item.precio).toFixed(2)}`}</span>
-                <span>{curso.quantity}</span>
-              </div>
-            ))}
-            <div className="modal-total">
-              <span>Total:</span>
-              <span>{`$${total.toFixed(2)}`}</span>
+            <div className="modal-header">
+              <h3 className="modal-title">Resumen de Compra</h3>
+              <span className="modal-close" onClick={handleCloseModal}>
+                X
+              </span>
             </div>
-            <button className="modal-button-close" onClick={handleCloseModal}>
-              Cerrar
-            </button>
+            <div className="modal-body">
+              {cartItems.map((curso) => (
+                <div className="modal-item" key={curso.item.id}>
+                  <span className="modal-item-name">{curso.item.nombre}</span>
+                  <span className="modal-item-price">{`$${(+curso.item.precio).toFixed(2)}`}</span>
+                  <span className="modal-item-quantity">{curso.quantity}</span>
+                </div>
+              ))}
+            </div>
+            <div className="modal-total">
+              <span className="modal-total-label">Total:</span>
+              <span className="modal-total-amount">{`$${total.toFixed(2)}`}</span>
+            </div>
+            <div className="modal-buttons">
+              <button className="modal-button-close" onClick={handleCloseModal}>
+                Cerrar
+              </button>
+              
+            </div>
           </div>
         </div>
       </Modal>
+
     </div>
-
-
-
   );
 }
 

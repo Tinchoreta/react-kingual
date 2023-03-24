@@ -125,6 +125,11 @@
     background-color: #ac2925;
   }
 
+  body > div.ReactModalPortal > div > div{
+    background: none !important;
+    border: none !important;
+  }
+
    .modal {
     display: block;
     position: fixed;
@@ -132,15 +137,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    width: 80%;
+    width: 90%;
     max-width: 500px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
+
+  .modal-content {
+    display: block;
+    height: 100%;
+    min-height: max-content;
+    z-index: 10000;
+    color: #004b66;
+  }
   
   .modal-header {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -162,7 +175,7 @@
   }
   
   .modal-item {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
@@ -180,7 +193,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 1em;
+    margin-right: 1em;
   }
   
   .modal-total-label {
@@ -194,9 +210,18 @@
   .modal-buttons {
     display: flex;
     justify-content: space-between;
+    background-color: white;
+    color: blue;
+    border: 1px solid grey;
   }
   
-  .modal-button {
+  .modal-button-close {
+    position: absolute;
+    bottom: 1em;
+    left: 200px;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
