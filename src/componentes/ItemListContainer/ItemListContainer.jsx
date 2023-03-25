@@ -46,11 +46,11 @@ const ItemListContainer = () => {
 
 
   return (
-    <>
+    
       <div className='container'>
         <ItemList data={listaCursos} />
       </div>
-    </>
+    
   )
 }
 
