@@ -1,5 +1,19 @@
 ##  Empezando con Create React App en Kingual Education (Carrito de compras)
-Este proyecto se inició con Create React App.
+Este proyecto se inició con Create React App. 
+Se trata de un proyecto que sirvió como Trabajo Final del curso de REACT.JS de la academia CODERHOUSE en intenta dar luz a los conocimientos adquiridos durante el curso.
+Entre otros, se vieron los siguientes tópicos:
+Instalación y configuración del entorno
+JSX y transpiling
+Componentes I
+Componentes II
+Promises, asincronía y MAP
+Consumiendo API's
+Routing y navegación
+Eventos
+Context
+Técnicas de rendering
+Firebase I
+Firebase II
 
 ## Scripts Disponibles
 En el directorio del proyecto, puedes ejecutar:
