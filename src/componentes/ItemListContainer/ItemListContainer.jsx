@@ -31,7 +31,7 @@ const ItemListContainer = () => {
       })
      
     if (categoriaId) {
-      const cursoPorCategoria = query(cursoRefCollection, where('idioma', '==', categoriaId),orderBy("id"));
+      const cursoPorCategoria = query(cursoRefCollection, where('idioma', '==', categoriaId));
       getDocs(cursoPorCategoria).then((snapshot) => {
         if (snapshot === 0) {
           console.log("No hay resultados cuando busco por categoria")
@@ -43,8 +43,8 @@ const ItemListContainer = () => {
     else
     getDocs(cursoOrdenadoPorId).then((snapshot) =>  setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))))
 
-
   }, [categoriaId])
+ 
 
 
 
