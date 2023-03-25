@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import bbdd from '../../bbdd/bbdd.json' //ya no uso el mock de bbdd sino que utilizo firebase
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where, orderBy } from "firebase/firestore";
 
 
 
@@ -20,16 +20,18 @@ const ItemListContainer = () => {
 
     const cursoRefCollection = collection(db, 'cursos');
     
-    getDocs(cursoRefCollection).then((snapshot) => {
-      if (snapshot === 0) {
-        console.log("No hay resultados")
-      }
-      setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    const cursoOrdenadoPorId = query(cursoRefCollection, orderBy('id')); 
 
-    })
-
+      getDocs(cursoOrdenadoPorId).then((snapshot) => {
+        if (snapshot === 0) {
+          console.log("No hay resultados cuando busco por categoria")
+        }
+        setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+  
+      })
+     
     if (categoriaId) {
-      const cursoPorCategoria = query(cursoRefCollection, where('idioma', '==', categoriaId));
+      const cursoPorCategoria = query(cursoRefCollection, where('idioma', '==', categoriaId),orderBy("id"));
       getDocs(cursoPorCategoria).then((snapshot) => {
         if (snapshot === 0) {
           console.log("No hay resultados cuando busco por categoria")
@@ -39,7 +41,7 @@ const ItemListContainer = () => {
       })
     }
     else
-    getDocs(cursoRefCollection).then((snapshot) =>  setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))))
+    getDocs(cursoOrdenadoPorId).then((snapshot) =>  setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))))
 
 
   }, [categoriaId])

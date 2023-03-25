@@ -278,8 +278,8 @@ body>div.ReactModalPortal>div>div {
   bottom: 1em;
   left: 350px;
   background-color: white;
-  color: rgb(46, 46, 235);
-  border: 1px solid rgb(49, 49, 219);
+  color: #4d4d4d;
+  border: 1px solid #4d4d4d;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
