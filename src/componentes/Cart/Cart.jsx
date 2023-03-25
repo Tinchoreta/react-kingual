@@ -31,21 +31,21 @@ function Cart() {
       {cartItems.length > 0 ? (
         <>
           {
-          cartItems.map((curso) => (
-            <div className="cart-item" key={curso.item.id}>
-              <span className="cart-item-name">{curso.item.nombre}</span>
-              <span className="cart-item-quantity"> {curso.quantity === undefined ? '' : `Unidades: ${(+curso.quantity)}`}</span>
-              <span className="cart-item-price"> {curso.item.precio === undefined ? '' : `Precio unitario: $ ${(+curso.item.precio).toFixed(2)}`}</span>
-              <span className="cart-item-subtotal"> {curso.item.precio === undefined ? '' : `Subtotal: $ ${(+curso.item.precio * curso.quantity).toFixed(2)}`}</span>
-              <button className="cart-item-remove" onClick={() => removeProduct(curso.item.id)}>
-                Quitar
-              </button>
-            </div>
-          ))
+            cartItems.map((curso) => (
+              <div className="cart-item" key={curso.item.id}>
+                <span className="cart-item-name">{curso.item.nombre}</span>
+                <span className="cart-item-quantity"> {curso.quantity === undefined ? '' : `Unidades: ${(+curso.quantity)}`}</span>
+                <span className="cart-item-price"> {curso.item.precio === undefined ? '' : `Precio unitario: USD $ ${(+curso.item.precio).toFixed(2)}`}</span>
+                <span className="cart-item-subtotal"> {curso.item.precio === undefined ? '' : `Subtotal: USD $ ${(+curso.item.precio * curso.quantity).toFixed(2)}`}</span>
+                <button className="cart-item-remove" onClick={() => removeProduct(curso.item.id)}>
+                  Quitar
+                </button>
+              </div>
+            ))
           }
           <div className='cart-total-courses'>
             <span className="cart-total">{`Total de cursos: ${totalCartItems}`}</span>
-            <span className="cart-total-price">{`Total: $${parseFloat(total).toFixed(2)}`}</span>
+            <span className="cart-total-price">{`Total: USD$${parseFloat(total).toFixed(2)}`}</span>
           </div>
         </>
       ) : (
@@ -65,11 +65,11 @@ function Cart() {
           </button>
         </div>
       }
-
+      {cartItems.length === 0 &&
         <button className="cart-button cart-button-continue">
           <Link to="/">Seguir comprando</Link>
         </button>
-
+      }
 
       {/* Checkout abre ventana modal  */}
 
@@ -85,15 +85,15 @@ function Cart() {
               {cartItems.map((curso) => (
                 <div className="modal-item" key={curso.item.id}>
                   <span className="modal-item-name">{curso.item.nombre}</span>
-                  <span className="modal-item-price">{`$${(+curso.item.precio).toFixed(2)}`}</span>
+                  <span className="modal-item-price">{`USD $${(+curso.item.precio).toFixed(2)}`}</span>
                   <span className="modal-item-quantity">cantidad: {curso.quantity}</span>
-                  <span className="modal-item-subtotal"> {curso.item.precio === undefined ? '' : `Subtotal: $ ${(+curso.item.precio * curso.quantity).toFixed(2)}`}</span>
+                  <span className="modal-item-subtotal"> {curso.item.precio === undefined ? '' : `Subtotal: USD $ ${(+curso.item.precio * curso.quantity).toFixed(2)}`}</span>
                 </div>
               ))}
             </div>
             <div className="modal-total">
               <span className="modal-total-label">Total:</span>
-              <span className="modal-total-amount">{`$${total.toFixed(2)}`}</span>
+              <span className="modal-total-amount">{`USD$${total.toFixed(2)}`}</span>
             </div>
             <div className="modal-buttons">
               <button className="modal-button-close" onClick={handleCloseModal}>
