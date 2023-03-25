@@ -4,6 +4,7 @@
     align-items: center;
     background-color: #f0f8ff;
     padding: 20px;
+    margin-bottom: 20px;
   }
   
   .cart-header {
@@ -13,11 +14,24 @@
     margin-bottom: 20px;
     color: #4d4d4d;
   }
+
+  .no-items-to-show {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d34e25;
+  }
   
   .cart-total {
     font-size: 24px;
     font-weight: bold;
     color: #006699;
+  }
+
+  .cart-total-price{
+    font-size: 24px;
+    font-weight: bold;
+    color: #006699;
+    margin-left: 1em;
   }
 
   .cart-total-courses {
@@ -37,6 +51,10 @@
     border-radius: 5px;
     color: #4d4d4d;
   }
+
+  .cart-item:nth-last-child(3) {
+    margin-bottom: 3em;
+  }
   
   .cart-item-name {
     font-size: 18px;
@@ -46,9 +64,15 @@
   
   .cart-item-price {
     font-size: 16px;
-    color: #145308;
+    color: #121dc0;
   }
   
+
+  .cart-item-subtotal {
+    font-size: 16px;
+    color: #121dc0;
+    font-weight: bold;
+  }
   .cart-item-remove {
     background-color: #d9534f;
     color: #fff;
@@ -138,7 +162,7 @@
     transform: translate(-50%, -50%);
     background-color: white;
     width: 90%;
-    max-width: 500px;
+    max-width: 800px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -175,13 +199,17 @@
   }
   
   .modal-item {
-    display: block;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 10px;
   }
   
-  .modal-item-name {
+  .modal-item-name  {
+    font-weight: bold;
+  }
+
+  .modal-item-subtotal{
     font-weight: bold;
   }
   
@@ -218,7 +246,7 @@
   .modal-button-close {
     position: absolute;
     bottom: 1em;
-    left: 200px;
+    left: 350px;
     background-color: white;
     color: blue;
     border: 1px solid blue;
