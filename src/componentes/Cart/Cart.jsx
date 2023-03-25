@@ -30,7 +30,8 @@ function Cart() {
       </div>
       {cartItems.length > 0 ? (
         <>
-          {cartItems.map((curso) => (
+          {
+          cartItems.map((curso) => (
             <div className="cart-item" key={curso.item.id}>
               <span className="cart-item-name">{curso.item.nombre}</span>
               <span className="cart-item-quantity"> {curso.quantity === undefined ? '' : `Unidades: ${(+curso.quantity)}`}</span>
@@ -40,7 +41,8 @@ function Cart() {
                 Quitar
               </button>
             </div>
-          ))}
+          ))
+          }
           <div className='cart-total-courses'>
             <span className="cart-total">{`Total de cursos: ${totalCartItems}`}</span>
             <span className="cart-total-price">{`Total: $${parseFloat(total).toFixed(2)}`}</span>
