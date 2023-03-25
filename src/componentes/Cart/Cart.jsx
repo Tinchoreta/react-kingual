@@ -6,7 +6,7 @@ import './Cart.css';
 
 function Cart() {
   const { cartItems, removeProduct, clearCart, calculateTotalQuantity,
-    calculateTotalCartPrice } = useCartContext();
+    calculateTotalCartPrice, saveOrder } = useCartContext();
 
   const total = calculateTotalCartPrice();
 
@@ -17,6 +17,7 @@ function Cart() {
 
   const handleShowModal = () => {
     setShowModal(true);
+    const order = saveOrder("Martín Reta", "tinchoreta@gmail.com");
   };
 
   const handleCloseModal = () => {
@@ -78,6 +79,9 @@ function Cart() {
           <div className="modal-content">
             <div className="modal-header">
               <h3 className="modal-title">Resumen de Compra</h3>
+              <h4 className='modal-date'>{Date.now().toLocaleString()}</h4>
+              <h4 className='modal-buyer'>Compra a nombre de: Martín Reta</h4>
+              <h4 className='modal-buyer-email'>Correo electrónico: tinchoreta@gmail.com</h4>
               <span className="modal-close" onClick={handleCloseModal}>
               </span>
             </div>

@@ -216,6 +216,21 @@ body>div.ReactModalPortal>div>div {
   font-weight: bold;
 }
 
+.modal-date {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+.modal-buyer {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-buyer-email {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .modal-close {
   font-size: 1.2rem;
   color: grey;

@@ -1,4 +1,5 @@
-import React, { createContext, useState, useContext } from 'react'
+import React, { createContext, useState, useContext } from 'react';
+import { collection, getFirestore, addDoc } from "firebase/firestore";
 
 const CartContext = createContext( null );
 
@@ -85,6 +86,26 @@ const CartProvider = ({ children }) => {
     return total;
   };
 
+  //7) Guardar datos del pedido en BD
+
+  const saveOrder = (clientName= 'Martín Reta', clientMail= 'tinchoreta@gmail.com')=>{
+    const todayDate = Date.now().toLocaleString();
+    const total = calculateTotalCartPrice();
+    const order = {
+      todayDate,
+      client:{
+        client: clientName,
+        email: clientMail,
+        },
+      items: cartItems,
+      totalBuy: total 
+    }
+    const db = getFirestore();
+    const orderCol = collection(db,'orders');
+    addDoc(orderCol, order)
+    .then(({id})=>console.log(id));
+    
+  }
 
   return (
 
@@ -95,7 +116,8 @@ const CartProvider = ({ children }) => {
       clearCart,
       isInCart,
       calculateTotalQuantity,
-      calculateTotalCartPrice
+      calculateTotalCartPrice,
+      saveOrder
     }}>
 
       {children}

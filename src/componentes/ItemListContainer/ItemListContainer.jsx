@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
 // import bbdd from '../../bbdd/bbdd.json' //ya no uso el mock de bbdd sino que utilizo firebase
+
+import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, getFirestore, query, where, orderBy } from "firebase/firestore";
