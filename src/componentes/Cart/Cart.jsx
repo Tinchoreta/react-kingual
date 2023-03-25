@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 import Modal from 'react-modal';
 import './Cart.css';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 function Cart() {
   const { cartItems, removeProduct, clearCart, calculateTotalQuantity,
@@ -23,6 +25,34 @@ function Cart() {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  //Manejo de sweetAlert para popup de alerta ante eventos como vaciar carrito
+
+  const showConfirmEmptyCart = ()=>{
+    const MySwal = withReactContent(Swal);
+    MySwal.fire({
+      title: 'Estás seguro que quieres vaciar el carrito?',
+      text: "No podrás revertir esta acción!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, vacialo!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clearCart();
+        MySwal.fire(
+          'Vaciado!',
+          'Tu carrito ha sido vaciado.',
+          'success'
+        )
+      }
+    })
+  }
+
+
+
+
 
   return (
     <div className="cart">
@@ -55,7 +85,7 @@ function Cart() {
 
       {cartItems.length > 0 &&
         <div className="cart-buttons">
-          <button className="cart-button cart-button-clear" onClick={clearCart}>
+          <button className="cart-button cart-button-clear" onClick={showConfirmEmptyCart}>
             Vaciar carrito
           </button>
           <button className="cart-button cart-button-continue">
