@@ -46,3 +46,19 @@ Esta sección se ha trasladado aquí: https://facebook.github.io/create-react-ap
 
 ## Creación de una aplicación web progresiva
 Esta sección se ha trasladado aquí: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive
+
+
+## Contribución
+Si deseas contribuir a este proyecto, sigue los siguientes pasos:
+
+Realiza un fork del proyecto
+Crea una nueva rama (git checkout -b feature/nueva-caracteristica)
+Realiza los cambios necesarios y realiza un commit (git commit -am 'Añade nueva característica')
+Haz un push a la rama (git push origin feature/nueva-caracteristica)
+Abre un Pull Request
+
+## Licencia
+Este proyecto está bajo la licencia MIT. Para más información, por favor revisa el sitio: https://es.wikipedia.org/wiki/Licencia_MIT.
+
+## Contacto
+Si tienes alguna pregunta o comentario sobre este proyecto, por favor ponte en contacto conmigo a través de mi correo electrónico: tinchoreta@gmail.com o a través de mi perfil de Github: Tinchoreta.
