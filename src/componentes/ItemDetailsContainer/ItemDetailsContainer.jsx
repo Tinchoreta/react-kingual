@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import bbdd from '../../bbdd/bbdd.json'
+//import bbdd from '../../bbdd/bbdd.json' deprecated - Uso de firebase actualmente
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc, getFirestore } from "firebase/firestore";
@@ -11,7 +11,7 @@ const ItemDetailsContainer = () => {
   const [listaCursos, setListaCursos] = useState([])
 
   const { detalleId } = useParams();
-  // Usamos un efecto para cargar los datos del Json de cursos al montar el componente.
+  // Usamos un efecto para cargar los datos de Firebase de cursos al montar el componente.
 
   useEffect(() => {
     const db = getFirestore();

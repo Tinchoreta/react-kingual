@@ -22,9 +22,9 @@ const CartProvider = ({ children }) => {
   //2) Verificar si un producto ya está en el carrito
 
   const isInCart = (id) => {
-    console.log("ID a buscar en el carrito:", id);
+    
     const foundProduct = cartItems.find((product) => Number(product.item.id) === Number(id));
-    console.log("Producto encontrado:", !!foundProduct);
+    
     return !!foundProduct;  //? true : false;
   };
 
@@ -40,7 +40,7 @@ const CartProvider = ({ children }) => {
   //4) Agregar un producto al carrito
 
   const addProduct = (item, quantity) => {
-    console.log(quantity + " " + item.id);
+    
 
     if (isInCart(item.id)) {
       const updatedCartItems = cartItems.map((cartItem) => {
@@ -49,18 +49,16 @@ const CartProvider = ({ children }) => {
           : cartItem;
       });
       setCartItems(updatedCartItems);
-      console.table(updatedCartItems);
+      
     } else {
       setCartItems([...cartItems, { item, quantity }]);
-      console.table(cartItems + " en el else de addProduct");
+      
     }
 
 
 
     const itemInCart = cartItems.find((cartItem) => Number(cartItem.item.id) === item.id);
-    console.log(
-      `Stock de ${item.nombre}: ${itemInCart ? itemInCart.quantity : 0} unidades`
-    );
+    
   };
 
   //5) Total de productos en el carrito
@@ -102,9 +100,8 @@ const CartProvider = ({ children }) => {
     }
     const db = getFirestore();
     const orderCol = collection(db,'orders');
-    addDoc(orderCol, order)
-    .then(({id})=>console.log(id));
-    
+    addDoc(orderCol, order);
+        
   }
 
   return (

@@ -20,7 +20,7 @@ const ItemBase = () => {
 
   }, []);
 
-  //console.log(product)
+
 
   return (
     <div>ItemBase

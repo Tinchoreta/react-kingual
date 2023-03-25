@@ -12,14 +12,7 @@ const Item = ({ curso = {} }) => {
 
     const onAdd = (quantity) => {
 
-        console.log("Estoy en Item, curso id: " + curso.id);
-
         addProduct(curso, quantity)
-
-
-
-
-
     }
 
     return (

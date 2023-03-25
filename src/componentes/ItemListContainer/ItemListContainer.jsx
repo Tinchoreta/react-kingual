@@ -24,19 +24,15 @@ const ItemListContainer = () => {
     const cursoOrdenadoPorId = query(cursoRefCollection, orderBy('id')); 
 
       getDocs(cursoOrdenadoPorId).then((snapshot) => {
-        if (snapshot === 0) {
-          console.log("No hay resultados cuando busco por categoria")
-        }
-        setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+
+      setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
   
       })
      
     if (categoriaId) {
       const cursoPorCategoria = query(cursoRefCollection, where('idioma', '==', categoriaId));
       getDocs(cursoPorCategoria).then((snapshot) => {
-        if (snapshot === 0) {
-          console.log("No hay resultados cuando busco por categoria")
-        }
+
         setListaCursos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
   
       })
