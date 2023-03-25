@@ -79,7 +79,7 @@ function Cart() {
           <div className="modal-content">
             <div className="modal-header">
               <h3 className="modal-title">Resumen de Compra</h3>
-              <h4 className='modal-date'>{Date.now().toLocaleString()}</h4>
+              <h4 className='modal-date'>{new Date().toLocaleString()}</h4>
               <h4 className='modal-buyer'>Compra a nombre de: Martín Reta</h4>
               <h4 className='modal-buyer-email'>Correo electrónico: tinchoreta@gmail.com</h4>
               <span className="modal-close" onClick={handleCloseModal}>

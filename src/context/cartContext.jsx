@@ -89,7 +89,7 @@ const CartProvider = ({ children }) => {
   //7) Guardar datos del pedido en BD
 
   const saveOrder = (clientName= 'Martín Reta', clientMail= 'tinchoreta@gmail.com')=>{
-    const todayDate = Date.now().toLocaleString();
+    const todayDate = new Date().toLocaleString();
     const total = calculateTotalCartPrice();
     const order = {
       todayDate,
