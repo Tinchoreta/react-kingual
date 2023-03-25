@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import bbdd from '../../bbdd/bbdd.json'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 
 
@@ -13,16 +14,15 @@ const ItemDetailsContainer = () => {
   // Usamos un efecto para cargar los datos del Json de cursos al montar el componente.
 
   useEffect(() => {
-    const getData = new Promise(resolve => {
-      setTimeout(() => {
+    const db = getFirestore();
 
-        resolve(bbdd);
-      }, 1000)
-    })
-
-
-    getData.then(res => { setListaCursos(res.find(curso => curso.id === parseInt(detalleId))) });
-
+    const cursoRef = doc(db, "cursos", detalleId);
+    getDoc(cursoRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        setListaCursos({ id: snapshot.id, ...snapshot.data() });
+      }
+    });
+     
   }, [])
 
 

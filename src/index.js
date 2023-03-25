@@ -4,10 +4,8 @@ import Loader from './componentes/Loader/Loader';
 import './index.css';
 import Modal from 'react-modal';
 
+
 Modal.setAppElement('#root'); // o cualquier otro elemento raíz de tu aplicación
-
-
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

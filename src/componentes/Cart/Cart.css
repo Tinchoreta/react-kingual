@@ -19,6 +19,7 @@
     font-size: 24px;
     font-weight: bold;
     color: #d34e25;
+    margin-bottom: 2em;
   }
   
   .cart-total {
@@ -35,6 +36,8 @@
   }
 
   .cart-total-courses {
+    display: flex;
+    justify-items: end;
     font-size: 20px;
     font-weight: bold;
     color: #084e72;
@@ -53,7 +56,7 @@
   }
 
   .cart-item:nth-last-child(3) {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
   
   .cart-item-name {
